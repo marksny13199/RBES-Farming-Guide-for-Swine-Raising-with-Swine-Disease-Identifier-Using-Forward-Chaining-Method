@@ -1,0 +1,87 @@
+ons-page {
+		animation: transitionIn 0.6s;
+
+	}
+	@keyframes transitionIn{
+		from {
+			opacity: 0;
+			transform: translateX(-10%);
+
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
+
+		}
+	}
+	.Accel {
+	transform: translate3d(0,0,0);
+	}
+.background{
+background-color:#11D47F;
+}
+ons-toolbar{
+	border: none !important;
+	background: #11D47F !important;
+
+}
+#back_icon, #settings_icon{
+
+  color: #fff !important;
+	border: none !important;
+
+}
+#back_button{
+	background-color:none !important;
+	border: none;
+
+}
+#introduction{
+  margin-top: -20px;
+  padding: 20px;
+}
+#intro{
+  font-size: 50px !important;
+  color: white;
+  opacity:0.7;
+
+}
+#intro_p{
+  color: white;
+  opacity: 0.9;
+  font-family: Candara;
+  font-size: 18px;
+}
+#page_1{
+  color: #598392 !important;
+  border-radius: 25px;
+  background: #faf9f9;
+  color: black !important;
+  padding: 20px;
+}
+#intro_translate, #area_translate, #water_translate, #waste_translate, #trans_05, #trans_06, #trans_07, #trans_08, #trans_09, #trans_10, #trans_11, #trans_12, #trans_13{
+  display: none;
+}
+#translate01_button, #translate05_button, #translate05_button, #translate06_button{
+  background-color: #21D47F!important;
+  border: 1px solid white;
+}
+#translate02_button, #translate03_button, #translate04_button, #translate07_button, #translate08_button, #translate09_button, #translate10_button, #translate11_button, #translate12_button, #translate13_button{
+	color: black !important;
+	border: 1px solid grey !important;
+}
+hr{
+  border: 2px solid #598392;
+}
+img{
+  border-radius: 20px;
+}
+#area_div, #water_source, #waste_div{
+
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.step_container{
+	padding: 20px;
+}

@@ -1,0 +1,53 @@
+ons-page {
+		animation: transitionIn 0.6s;
+
+	}
+	@keyframes transitionIn{
+		from {
+			opacity: 0;
+			transform: translateX(-10%);
+
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
+
+		}
+	}
+	.Accel {
+	transform: translate3d(0,0,0);
+	}
+.background{
+  background: #F9F9F7;
+}
+#back_icon, #settings_icon{
+
+	color: #fff !important;
+
+}
+#toolbar{
+	background: #2187DB !important;
+}
+#back_button{
+  border: none !important;
+
+}
+#card{
+	box-shadow: 20px 20px 50px 10px #A3CEF1;
+}
+.form-group{
+  opacity:0;
+}
+.table{
+  opacity:0;
+}
+#proceed_button{
+  background: #2187DB;
+  color: #fff;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 2px 2px #8888;
+
+}

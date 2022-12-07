@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="../onsenui/css/onsen-css-components.min.css">
+  <link rel="stylesheet" href="../css/conclusion.css">
+  <script src="../onsenui/js/onsenui.min.js"></script>
+  <script src="../js/exit.js"></script>
+  <script src="../js/jquery.js"></script>
+  <script src="../js/swup.min.js"></script>
+  <script src="../js/inference_engine.js"></script>
+  <script src='../js/db_functions.js'></script>
+  <script src='../js/temp.js'></script>
+  <script>
+    $(document).ready(function(){
+      $("#translate01_button").click(function(){
+        $("#trans_01").slideToggle();
+      });
+      $("#translate02_button").click(function(){
+        $("#trans_02").slideToggle();
+      });
+      $("#translate03_button").click(function(){
+        $("#trans_03").slideToggle();
+      });
+      $("#translate04_button").click(function(){
+        $("#trans_04").slideToggle();
+      });
+      $("#translate05_button").click(function(){
+        $("#trans_05").slideToggle();
+      });
+      $("#obs_button").click(function(){
+        $(".obs_box_hide").slideToggle();
+      });
+      $("#sym_button").click(function(){
+        $(".sym_box_hide").slideToggle();
+      });
+      $("#cause_button").click(function(){
+        $(".cause_box_hide").slideToggle();
+      });
+    });
+  </script>
+
+</head>
+<body>
+<ons-page>
+  <div class="background"></div>
+  <ons-toolbar style="background-color: #131515; color: #fff;" id ="toolbar">
+    <div class="left">
+
+    </div>
+    <div class="center" id ="center" style="color: #fff;">Conclusion</div>
+
+  </ons-toolbar>
+  <div class="conclusion_page">
+  <div class="p_ident">
+      <h3 id = "prob_ident"> DISEASE IDENTIFIED </h3>
+      <img id ="pig_ic" src="../img/pig_ic.png"/>
+
+  </div>
+  <ons-card id ="disease_card">
+      <h5 id="disease_name"> Swine Fever </h5>
+      <hr />
+      <p id ="desc"> Description </p>
+      <p>Swine Fever is one of the viral diseases that is highly contagious and deadly in both domestic and feral swine of all ages. This cannot be transmitted from pigs to human and it is not food safety issue.</p>
+        <ons-button class = "ons-button" id = "translate01_button" modifier="outline light" ripple> See Translation... </ons-button>
+        <div id = "trans_01">
+          <br/>
+          <i> ~ Ang Swine Fever ay isa sa mga viral na sakit na lubhang nakakahawa at nakamamatay sa parehong domestic at feral na baboy sa lahat ng edad. Hindi ito maipapasa mula sa baboy patungo sa tao at hindi ito isyu sa kaligtasan ng pagkain</i>
+        </div>
+    </ons-card>
+      <div id ="obs_sym">
+        <h3> Tap the following buttons to view</h3>
+      <hr/>
+      <ons-button id = "obs_button" modifier="outline light" ripple> The observed signs and symptoms </ons-button>
+      <div class="obs_box_hide"> <p id="observed_output"> </p></div>
+     </div>
+
+     <div id="obs_sym">
+        <ons-button id = "sym_button" modifier="outline light" ripple>Signs and Symptoms of the Disease </ons-button>
+        <div class="sym_box_hide"><p>Fever or Reddening of eyes, Loss of appetite, and Trembling.</p>
+          <ons-button class = "ons-button" id = "translate02_button" modifier="outline light" ripple> See Translation... </ons-button>
+          <div id = "trans_02">
+            <br/>
+            <i id = "p_hide"> ~ Lagnat o Pamumula ng mga mata, Walang ganang kumain, at Panginginig.</i>
+          </div>
+        </div>
+      </div>
+
+      <div id ="obs_sym">
+        <ons-button id = "cause_button" modifier="outline light" ripple>Cause of the Disease</ons-button>
+          <div class="cause_box_hide"><p>The swine fever has a variety of causes such as Reddening of eyes, fever and insect bites (mosquitos).</p>
+            <ons-button class = "ons-button" id = "translate03_button" modifier="outline light" ripple> See Translation... </ons-button>
+            <div id = "trans_03">
+              <br/>
+              <i id = "p_hide"> ~ Ang swine fever ay may iba't ibang dahilan tulad ng pamumula ng mata, lagnat at kagat ng insekto (lamok).</i>
+            </div>
+          </div>
+            <hr />
+      </div>
+
+      <div class="treatment">
+        <div class="inner_page">
+        <h2 id = "trtment"> Treatment </h2>
+          <p> Injecting Penicillin sulfa will help treat the fever the number of dosage and instruction are already present in the vials.</p>
+          <ons-button class = "ons-button" id = "translate04_button" modifier="outline light" ripple> See Translation... </ons-button>
+          <div id = "trans_04">
+            <br/>
+            <i id = "p_hide"> ~ Ang pag-iniksyon ng Penicillin sulfa ay makakatulong sa paggamot sa lagnat ang bilang ng dosis at pagtuturo ay naroroon na sa mga vial.</i>
+          </div>
+        </div>
+      </div>
+      <div class="prevent">
+        <div class="inner_page_prevent">
+        <h2 id = "prv"> Prevention </h2>
+          <p>Cleaning the surroundings or area, and always disinfect the area.  </p>
+          <ons-button class = "ons-button" id = "translate05_button" modifier="outline light" ripple> See Translation... </ons-button>
+          <div id = "trans_05">
+            <br/>
+            <i id = "p_hide"> ~ Paglilinis ng paligid o lugar, at palaging disimpektahin ang lugar.</i>
+          </div>
+        </div>
+      </div>
+
+
+
+        <!--HIDE -->
+        <form>
+          <fieldset style ="border: none !important;">
+            <div id="div1">
+            <legend>Problem Identified</legend>
+            <input type="number" class="form-control" name="" id="disease_id" value= 5>
+
+            <legend>Problem Identified</legend>
+            <input type="text" class="form-control" name="" id="problem" value="Swine Fever">
+
+          </div>
+        <br>
+      <center style ="padding: 10px;"><ons-button style ="width: 100%; background: #fe6d73 !important; border: 1px solid white !important; color: white !important;" id="proceed_button" modifier="outline light" rippler>Exit</ons-button></center>
+          </fieldset>
+        </form>
+          <br />
+          <br />
+
+
+
+</ons-page>
+<script>
+
+  //for getting the observed symptoms in the local storage
+  document.getElementById("observed_output").innerHTML=localStorage.getItem("observed1");
+
+  //prevent user from backing
+  function preventBack(){
+    window.history.forward();
+  }
+
+  setTimeout("preventBack()", 0);
+  window.onunload = function () { null };
+
+  </script>
+</body>
+</html>

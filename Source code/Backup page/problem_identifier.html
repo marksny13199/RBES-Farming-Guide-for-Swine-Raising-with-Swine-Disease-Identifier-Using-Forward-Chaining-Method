@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="onsenui/css/onsen-css-components.min.css">
+  <link rel="stylesheet" href="css/style_problem_identifier.css">
+  <script src="onsenui/js/onsenui.min.js"></script>
+  <script src="js/exit.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/swup.min.js"></script>
+  <script src="js/inference_engine.js"></script>
+</head>
+<body>
+<ons-page>
+  <div class="background"></div>
+  <ons-toolbar style="background-color: #131515; color: #fff;" id ="toolbar">
+   <div class="left">
+    <div class="left" id = "back_left" onclick="window.location.href='home.html'" data-transition="slidefade"><ons-button modifier="outline light" id = "back_button" tappable><i class="fas fa-chevron-left" id ="back_icon"></i></ons-button></div>
+  </div>
+    <div class="center" id ="center" style="color: #fff;">Problem Identifier</div>
+  <div class="right" id ="right"><i class="fas fa-cog" id ="settings_icon"></i></div>
+  </ons-toolbar>
+  <div class="check-page">
+    <div class="checklist">
+      <ons-button onclick="document.location='home.html'" id="btn-back" type="submit" >Go to Saved Problems</ons-button>
+         <br></br>
+           <center><h3>Please select the symptoms of your pig</h3></center>
+               <br></br>
+
+              <form id="myForm" onsubmit="inference_engine(this); return false;">
+
+                   <label class="container">
+                     <p> Bloody diarrhea</p>
+                    <input type="checkbox" id = "fact" name = "fact" value = "bloody_diarrhea">
+                    <span class="checkmark"></span>
+                  </label>
+                  <hr />
+                  <label class="container">
+                    <p> Vomiting</p>
+                   <input type="checkbox" id = "fact" name = "fact" value = "vomiting">
+                   <span class="checkmark"></span>
+                 </label>
+                 <hr />
+                  <label class="container"> <p> Dehydration </p>
+                    <input type="checkbox" id = "fact" name = "fact" value = "dehydration">
+                    <span class="checkmark"></span>
+                  </label>
+                  <hr/>
+                  <label class="container"> <p> Weakness </p>
+                    <input type="checkbox" id = "fact" name = "fact" value = "weakness">
+                    <span class="checkmark"></span>
+                  </label>
+                  <hr/>
+                  <label class="container"> <p> Skinny </p>
+                    <input type="checkbox" id = "fact" name = "fact" value = "skinny">
+                    <span class="checkmark"></span>
+                  </label>
+                  <hr/>
+                  <label class="container"> <p> Fever </p>
+                    <input type="checkbox" id = "fact" name = "fact" value = "fever">
+                    <span class="checkmark"></span>
+                  </label>
+                  <hr/>
+                  <label class="container"> <p> Loss of Appetite </p>
+                    <input type="checkbox" id = "fact" name = "fact" value = "loss_of_appetite">
+                    <span class="checkmark"></span>
+                  </label>
+                  <hr/>
+                  <label class="container"> <p> Trembling </p>
+                    <input type="checkbox" id = "fact" name = "fact" value = "trembling">
+                    <span class="checkmark"></span>
+                  </label>
+                  <hr/>
+                  <label class="container"> <p> Diarrhea</p>
+                    <input type="checkbox" id = "fact" name = "fact" value = "diarrhea">
+                    <span class="checkmark"></span>
+                  </label>
+                  <hr/>
+                  <label class="container"> <p> Weight loss</p>
+                    <input type="checkbox" id = "fact" name = "fact" value = "weight_loss">
+                    <span class="checkmark"></span>
+                  </label>
+                  <hr/>
+                  <label class="container"> <p> Slow growth </p>
+                    <input type="checkbox" id = "fact" name = "fact" value = "slow_growth">
+                    <span class="checkmark"></span>
+                  </label>
+                  <hr/>
+                  <label class="container"> <p> Coughing </p>
+                    <input type="checkbox" id = "fact" name = "fact" value = "coughing">
+                    <span class="checkmark"></span>
+                  </label>
+                  <hr/>
+                  <label class="container"> <p> Live worms expelled in the feces </p>
+                    <input type="checkbox" id = "fact" name = "fact" value = "live_worms_expelled_in_the_feces">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container"> <p> Whitish to yellowish diarrhea </p>
+                    <input type="checkbox" id = "fact" name = "fact" value = "whitish_to_yellowish_diarrhea">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container"> <p> Skin rash on hands, mouth, and or feet </p>
+                    <input type="checkbox" id = "fact" name = "fact" value = "skin_rash_on_hands_mouth_and_or_feet">
+                    <span class="checkmark"></span>
+                  </label>
+                  <hr/>
+                  <label class="container"> <p>Excessive salivation </p>
+                    <input type="checkbox" id = "fact" name = "fact" value = "excessive_salivation">
+                    <span class="checkmark"></span>
+                  </label>
+                  <hr/>
+                  <label class="container"> <p>Yellow to clear, pasty to watery diarrhea or can be bloody feces from pigs between 7-10 days of age </p>
+                    <input type="checkbox" id = "fact" name = "fact" value = "yellow_to_clear_and_pasty_diarrhea_or_bloody">
+                    <span class="checkmark"></span>
+                  </label>
+                  <hr/>
+                  <label class="container"> <p>Failure to gain weight </p>
+                    <input type="checkbox" id = "fact" name = "fact" value = "failure_to_gain_weight">
+                    <span class="checkmark"></span>
+                  </label>
+                  <hr/>
+                  <label class="container"> <p> Acidic feces </p>
+                    <input type="checkbox" id = "fact" name = "fact" value = "acidic_feces">
+                    <span class="checkmark"></span>
+                  </label>
+                  <hr/>
+                  <label class="container"> <p> Skin has slight yellow appearance </p>
+                    <input type="checkbox" id = "fact" name = "fact" value = "skin_has_slight_yellow_appearance">
+                    <span class="checkmark"></span>
+                  </label>
+                  <hr/>
+                  <label class="container"> <p> Rapid breathing </p>
+                    <input type="checkbox" id = "fact" name = "fact" value = "rapid_breathing">
+                    <span class="checkmark"></span>
+                  </label>
+                  <hr/>
+                  <label class="container"> <p> Hemorrhage </p>
+                    <input type="checkbox" id = "fact" name = "fact" value = "hemorrhage">
+                    <span class="checkmark"></span>
+                  </label>
+                  <hr/>
+                  <label class="container"> <p> Constipation then diarrhea </p>
+                    <input type="checkbox" id = "fact" name = "fact" value = "constipation_then_diarrhea">
+                    <span class="checkmark"></span>
+                  </label>
+                     <ons-button type="button" id="sumbit">Analyze</ons-button>
+                  <div id="result">
+
+                  </div>
+    </div>
+  </div>
+</ons-page>
+<script>
+  
+$("#sumbit").click(function() {
+ $("#myForm").submit();
+});
+</script>
+</body>
+</html>

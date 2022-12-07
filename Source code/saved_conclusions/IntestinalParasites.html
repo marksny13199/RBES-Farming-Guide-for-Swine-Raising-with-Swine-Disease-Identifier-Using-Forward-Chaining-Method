@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="../onsenui/css/onsen-css-components.min.css">
+  <link rel="stylesheet" href="../css/conclusion.css">
+  <script src="../onsenui/js/onsenui.min.js"></script>
+  <script src="../js/exit.js"></script>
+  <script src="../js/jquery.js"></script>
+  <script src="../js/swup.min.js"></script>
+  <script src='../js/db_functions.js'></script>
+  <script>
+    $(document).ready(function(){
+      $("#translate01_button").click(function(){
+        $("#trans_01").slideToggle();
+      });
+      $("#translate02_button").click(function(){
+        $("#trans_02").slideToggle();
+      });
+      $("#translate03_button").click(function(){
+        $("#trans_03").slideToggle();
+      });
+      $("#translate04_button").click(function(){
+        $("#trans_04").slideToggle();
+      });
+      $("#translate05_button").click(function(){
+        $("#trans_05").slideToggle();
+      });
+      $("#obs_button").click(function(){
+        $(".obs_box_hide").slideToggle();
+      });
+      $("#sym_button").click(function(){
+        $(".sym_box_hide").slideToggle();
+      });
+      $("#cause_button").click(function(){
+        $(".cause_box_hide").slideToggle();
+      });
+    });
+  </script>
+
+</head>
+<body>
+<ons-page>
+  <div class="background"></div>
+  <ons-toolbar style="background-color: #131515; color: #fff;" id ="toolbar">
+    <div class="left">
+
+    </div>
+    <div class="center" id ="center" style="color: #fff;">Conclusion</div>
+
+  </ons-toolbar>
+  <div class="conclusion_page">
+  <div class="p_ident">
+      <h3 id = "prob_ident"> SAVED PROBLEM</h3>
+
+
+  </div>
+  <ons-card id ="disease_card">
+      <h5 id="disease_name"> Intestinal Parasite </h5>
+      <hr />
+      <p id ="desc"> Description </p>
+      <p> The Intestinal Parasite in swine resides in the stomach that irritates them and cause a lot of problems for their growth and digestion. The ascaris parasite is one of the most common internal parasites that is a large white roundworm that is found inside the small intestine. </p>
+        <ons-button class = "ons-button" id = "translate01_button" modifier="outline light" ripple> See Translation... </ons-button>
+        <div id = "trans_01">
+          <br/>
+          <i> ~ Ang Intestinal Parasite sa baboy ay naninirahan sa tiyan na nakakairita sa kanila at nagdudulot ng maraming problema sa kanilang paglaki at panunaw. Ang ascaris parasite ay isa sa mga pinakakaraniwang panloob na parasito na isang malaking puting roundworm na matatagpuan sa loob ng maliit na bituka.</i>
+        </div>
+    </ons-card>
+      <div id ="obs_sym">
+        <h3> Tap the following buttons to view</h3>
+      <hr/>
+      <ons-button id = "obs_button" modifier="outline light" ripple> The observed signs and symptoms </ons-button>
+      <div class="obs_box_hide"> <p id="observed_output"> </p></div>
+     </div>
+
+     <div id="obs_sym">
+        <ons-button id = "sym_button" modifier="outline light" ripple>Signs and Symptoms of the Disease </ons-button>
+        <div class="sym_box_hide"><p>Coughing, Diarrhea or Live Worms Expelled in the feces, Weight loss or Slow growth, and Trembling.</p>
+          <ons-button class = "ons-button" id = "translate02_button" modifier="outline light" ripple> See Translation... </ons-button>
+          <div id = "trans_02">
+            <br/>
+            <i id = "p_hide"> ~ Pag-uubo, Pag-tatae o Pag-tatae na merong uod, Nababawasa ang timbang o Mabagal na paglaki, at Pangingnig.</i>
+          </div>
+        </div>
+      </div>
+
+      <div id ="obs_sym">
+        <ons-button id = "cause_button" modifier="outline light" ripple>Cause of the Disease</ons-button>
+          <div class="cause_box_hide"><p>The intestinal parasite is particularly come from oral ingestion of worm eggs this is due to the environment and sudden climate changes, dirty pens or lots may have more worm eggs and may cause internal parasites after the swine ingest it.</p>
+            <ons-button class = "ons-button" id = "translate03_button" modifier="outline light" ripple> See Translation... </ons-button>
+            <div id = "trans_03">
+              <br/>
+              <i id = "p_hide"> ~ Ang bituka na parasito ay partikular na nagmumula sa oral na paglunok ng mga itlog ng bulate ito ay dahil sa kapaligiran at biglaang pagbabago ng klima, ang maruming mga kulungan o lote ay maaaring magkaroon ng mas maraming itlog ng bulate at maaaring maging sanhi ng mga panloob na parasito pagkatapos itong kainin ng baboy.</i>
+            </div>
+          </div>
+            <hr />
+      </div>
+
+      <div class="treatment">
+        <div class="inner_page">
+        <h2 id = "trtment"> Treatment </h2>
+          <p> Use multi-vitamins powder and add it into a water soluble for easy digestion or use B – complex (injection) the following dosage and instruction are present in the vials make sure to check before you buy.  </p>
+          <ons-button class = "ons-button" id = "translate04_button" modifier="outline light" ripple> See Translation... </ons-button>
+          <div id = "trans_04">
+            <br/>
+            <i id = "p_hide"> ~ Gumamit ng multi-vitamins powder at idagdag ito sa nalulusaw sa tubig para madaling matunaw o gamitin ang B – complex (injection) ang sumusunod na dosis at pagtuturo ay nasa mga vial siguraduhing suriin bago ka bumili.</i>
+          </div>
+        </div>
+      </div>
+      <div class="prevent">
+        <div class="inner_page_prevent">
+        <h2 id = "prv"> Prevention </h2>
+          <p> Clean the area and provide better shelter or pen that may help get rid or prevent of the worm eggs, also deworm the are every month.  </p>
+          <ons-button class = "ons-button" id = "translate05_button" modifier="outline light" ripple> See Translation... </ons-button>
+          <div id = "trans_05">
+            <br/>
+            <i id = "p_hide"> ~ Linisin ang lugar at magbigay ng mas magandang silungan o kulungan na maaaring makatulong sa pag-alis o pag-iwas sa mga itlog ng bulate, pati na rin ang pag-deworm sa bawat buwan.</i>
+          </div>
+        </div>
+      </div>
+
+        <center style ="padding: 10px;"><ons-button style ="width: 100%; border: 1px solid black !important; color: black !important;"onclick="window.location.replace('../ProblemPage.html')" class="btn btn-success" modifier="outline light" ripple>Back</ons-button></center>
+        <br />
+        <br />
+
+    <!--HIDDEN -->
+
+
+</ons-page>
+<script>
+
+  //for getting the observed symptoms in the local storage
+  document.getElementById("observed_output").innerHTML=localStorage.getItem("observed2");
+
+  //prevent user from backing
+  function preventBack(){
+    window.history.forward();
+  }
+
+  setTimeout("preventBack()", 0);
+  window.onunload = function () { null };
+
+  </script>
+</body>
+</html>

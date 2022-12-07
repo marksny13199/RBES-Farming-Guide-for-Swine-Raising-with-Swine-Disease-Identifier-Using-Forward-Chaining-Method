@@ -1,0 +1,211 @@
+ons-page {
+		animation: transitionIn 0.6s;
+
+	}
+	@keyframes transitionIn{
+		from {
+			opacity: 1;
+			transform: translate(-10%);
+
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
+
+		}
+	}
+
+.Accel {
+transform: translate3d(0,0,0);
+}
+.background{
+
+	background-color:#F9F9F7;
+}
+ons-toolbar{
+	border: none !important;
+	background: #2187DB !important;
+
+}
+#card{
+
+	background-color: #131515; /* card color */
+	color: #fff;
+	box-shadow: 1px 2px 4px #66ff99;
+	overflow: hidden;
+}
+#welcome_card{
+
+	background-color: #2187DB;
+	border: none !important;
+	color:#fff;
+	padding: 30px;
+	border-radius: 0px 0px 15px 15px;
+
+}
+#logs_card{
+	overflow:hidden;
+	color: #343433;
+	border-radius: 20px 20px 20px 20px;
+	box-shadow:20px 20px 50px 10px #BAD3CF;
+	padding: 20px;
+
+}
+.logs_container{
+	padding: 10px;
+
+}
+
+
+#file{
+	font-size: 30px;
+	color: #343433;
+	padding:2px;
+}
+a{
+	text-decoration: none !important;
+}
+#view_button{
+	width:auto;
+	background: #2187DB;
+	color: #fff;
+	border-radius: 20px 0px 20px 0px;
+	border: none !important;
+
+}
+div #view_button{
+	float:right;
+	left: 20px;
+	top:20px;
+	width: 30%;
+	text-align: center;
+}
+#arrow{
+	font-size: 20px;
+}
+
+#p_ident_card{
+	background:#fff;
+	padding: 20px;
+	color: #343433;
+	border-radius: 20px 20px 20px 20px;
+	box-shadow:20px 20px 50px 10px #BAD3CF;
+}
+.outer{
+	padding: 10px;
+}
+.c_container{
+	padding-left: 5px;
+
+	border-radius: 20px 20px 20px 20px;
+}
+#m_container{
+	background: #90F6CA;
+}
+#p_container{
+	background: #A3CEF1;
+}
+#s_container{
+	background: #FFE386;
+}
+#information_management_container{
+	background: #B8A4B5;
+}
+#med_container{
+	background: #F05C7C;
+}
+#med_tap_button{
+	background: #D2143D;
+	color: #fff;
+	border-radius: 20px;
+}
+#sick_tap_button{
+	background: #EDB600;
+	color: #fff;
+	border-radius: 20px;
+}
+#info_manage_tap_button{
+	background: #9E849A;
+	color: #fff;
+	border-radius: 20px;
+}
+#p_manual{
+	background:#fff;
+	padding: 20px;
+	color: #343433;
+	border-radius: 20px 20px 20px 20px;
+	box-shadow:20px 20px 50px 10px #BAD3CF;
+}
+#manual_tap_button{
+	background: #0EAD69;
+	color: #fff;
+	border-radius: 20px;
+}
+
+#tap_button{
+	background: #2187DB;
+	color: #fff;
+	border-radius: 20px;
+}
+#center{
+	text-align: center !important;
+	color: #fff  !important;
+}
+#back_icon, #settings_icon{
+
+	color: #fff !important;
+	border: none !important;
+
+}
+
+#a_here{
+	color:  #99ff66;
+}
+#settings_icon{
+
+	padding-right: 5px;
+}
+#welcome_ic, #save_ic{
+
+	float:right;
+
+}
+#welcome_ic{
+	height: 100px;
+	width: 100px;
+}
+#manual_ic{
+
+	width: 20px;
+	margin-right: 40px;
+	float: right;
+}
+
+
+.topics{
+	padding-left: 20px;
+	padding-right: 20px;
+	color: #343433;
+}
+
+#row_para{
+
+	font-size: 15px;
+	font-weight: normal;
+
+}
+#icons{
+	padding: 2px;
+	float: right;
+	font-size: 40px;
+	color: #66ff99;
+}
+#manual_b{
+  float: left;
+  width: 100%;
+  padding: 0 5x;
+}
+
+#arrow{
+	color: #fff;
+}

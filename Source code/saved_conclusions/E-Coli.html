@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="../onsenui/css/onsen-css-components.min.css">
+  <link rel="stylesheet" href="../css/conclusion.css">
+  <script src="../onsenui/js/onsenui.min.js"></script>
+  <script src="../js/exit.js"></script>
+  <script src="../js/jquery.js"></script>
+  <script src="../js/swup.min.js"></script>
+  <script src='../js/db_functions.js'></script>
+  <script>
+    $(document).ready(function(){
+      $("#translate01_button").click(function(){
+        $("#trans_01").slideToggle();
+      });
+      $("#translate02_button").click(function(){
+        $("#trans_02").slideToggle();
+      });
+      $("#translate03_button").click(function(){
+        $("#trans_03").slideToggle();
+      });
+      $("#translate04_button").click(function(){
+        $("#trans_04").slideToggle();
+      });
+      $("#translate05_button").click(function(){
+        $("#trans_05").slideToggle();
+      });
+      $("#obs_button").click(function(){
+        $(".obs_box_hide").slideToggle();
+      });
+      $("#sym_button").click(function(){
+        $(".sym_box_hide").slideToggle();
+      });
+      $("#cause_button").click(function(){
+        $(".cause_box_hide").slideToggle();
+      });
+    });
+  </script>
+
+</head>
+<body>
+<ons-page>
+  <div class="background"></div>
+  <ons-toolbar style="background-color: #131515; color: #fff;" id ="toolbar">
+    <div class="left">
+
+    </div>
+    <div class="center" id ="center" style="color: #fff;">Conclusion</div>
+
+  </ons-toolbar>
+  <div class="conclusion_page">
+  <div class="p_ident">
+      <h3 id = "prob_ident"> SAVED PROBLEM </h3>
+
+
+  </div>
+  <ons-card id ="disease_card">
+      <h5 id="disease_name"> E-Coli </h5>
+      <hr />
+      <p id ="desc"> Description </p>
+      <p> Colibacillosis, or E. coli infection, is one of the major diseases for swine industry which is a typical bacterial disease caused by pathogenic Escherichia coli (E. coli). It mostly causes illness and death in neonatal and recently weaned pigs. </p>
+        <ons-button class = "ons-button" id = "translate01_button" modifier="outline light" ripple> See Translation... </ons-button>
+        <div id = "trans_01">
+          <br/>
+          <i> ~ Ang Colibacillosis, na kilala rin bilang impeksyon sa E. coli, na isang tipikal na sakit na bacterial na dulot ng pathogenic na Escherichia coli, ay isa sa mga pangunahing sakit para sa industriya ng baboy (E. coli). Pangunahin nitong sinasaktan at pinapatay ang mga neonatal at kamakailang naalis na mga baboy.</i>
+        </div>
+    </ons-card>
+      <div id ="obs_sym">
+        <h3> Tap the following buttons to view</h3>
+      <hr/>
+      <ons-button id = "obs_button" modifier="outline light" ripple> The observed signs and symptoms </ons-button>
+      <div class="obs_box_hide"> <p id="observed_output"> </p></div>
+     </div>
+
+     <div id="obs_sym">
+        <ons-button id = "sym_button" modifier="outline light" ripple>Signs and Symptoms of the Disease </ons-button>
+        <div class="sym_box_hide"><p>Diarrhea and Vomiting.</p>
+          <ons-button class = "ons-button" id = "translate02_button" modifier="outline light" ripple> See Translation... </ons-button>
+          <div id = "trans_02">
+            <br/>
+            <i id = "p_hide"> ~ Pag-tatae at Pag-susuka.</i>
+          </div>
+        </div>
+      </div>
+
+      <div id ="obs_sym">
+        <ons-button id = "cause_button" modifier="outline light" ripple>Cause of the Disease</ons-button>
+          <div class="cause_box_hide"><p>One of the causes of E-coli is ingesting bacteria in the feces of infected swine mostly this is because of unscheduled feeding or wrong food or feeds that may get them infected and vulnerable in infections.</p>
+            <ons-button class = "ons-button" id = "translate03_button" modifier="outline light" ripple> See Translation... </ons-button>
+            <div id = "trans_03">
+              <br/>
+              <i id = "p_hide"> ~ Isa sa mga sanhi ng E-coli ay ang paglunok ng bacteria sa dumi ng mga infected na baboy kadalasan ito ay dahil sa unscheduled feeding o maling pagkain o feeds na maaaring mahawa at madaling mahawa sa impeksyon.</i>
+            </div>
+          </div>
+            <hr />
+      </div>
+
+      <div class="treatment">
+        <div class="inner_page">
+        <h2 id = "trtment"> Treatment </h2>
+          <p> Water-soluble antibiotics with multi-vitamins as medication and they should be treated individually to not cause some infections.  </p>
+          <ons-button class = "ons-button" id = "translate04_button" modifier="outline light" ripple> See Translation... </ons-button>
+          <div id = "trans_04">
+            <br/>
+            <i id = "p_hide"> ~ Mga antibiotic na nalulusaw sa tubig na may mga multi-bitamina bilang gamot at dapat silang tratuhin nang paisa-isa upang hindi magdulot ng ilang impeksiyon.</i>
+          </div>
+        </div>
+      </div>
+      <div class="prevent">
+        <div class="inner_page_prevent">
+        <h2 id = "prv"> Prevention </h2>
+          <p> Keep the water source clean and surroundings clean. As for the food or feeds it must be new or latest.  </p>
+          <ons-button class = "ons-button" id = "translate05_button" modifier="outline light" ripple> See Translation... </ons-button>
+          <div id = "trans_05">
+            <br/>
+            <i id = "p_hide"> ~ Panatilihing malinis ang pinagmumulan ng tubig at malinis ang paligid. Kung tungkol sa pagkain o mga feed ay dapat na bago o pinakabago.</i>
+          </div>
+        </div>
+      </div>
+
+        <center style ="padding: 10px;"><ons-button style ="width: 100%; border: 1px solid black !important; color: black !important;"onclick="window.location.replace('../ProblemPage.html')" class="btn btn-success" modifier="outline light" ripple>Back</ons-button></center>
+        <br />
+        <br />
+
+    <!--HIDDEN -->
+
+
+</ons-page>
+<script>
+
+  //for getting the observed symptoms in the local storage
+  document.getElementById("observed_output").innerHTML=localStorage.getItem("observed2");
+
+  //prevent user from backing
+  function preventBack(){
+    window.history.forward();
+  }
+
+  setTimeout("preventBack()", 0);
+  window.onunload = function () { null };
+
+  </script>
+</body>
+</html>

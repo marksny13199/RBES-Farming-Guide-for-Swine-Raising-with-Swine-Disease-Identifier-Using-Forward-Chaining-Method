@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="onsenui/css/onsen-css-components.min.css">
+  <link rel="stylesheet" href="css/style_sickness.css">
+  <script src="onsenui/js/onsenui.min.js"></script>
+  <script src="js/exit.js"></script>
+    <script src="js/jquery.min.js"></script>
+  <script src="js/swup.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $("#translate01_button").click(function(){
+      $("#intro_translate").slideToggle();
+      });
+      $("#translate02_button").click(function(){
+        $("#trans02").slideToggle();
+      });
+      $("#translate03_button").click(function(){
+        $("#trans03").slideToggle();
+      });
+      $("#translate04_button").click(function(){
+        $("#trans04").slideToggle();
+      });
+      $("#translate05_button").click(function(){
+        $("#trans05").slideToggle();
+      });
+      $("#translate06_button").click(function(){
+        $("#trans06").slideToggle();
+      });
+      $("#translate07_button").click(function(){
+        $("#trans07").slideToggle();
+      });
+      $("#translate08_button").click(function(){
+        $("#trans08").slideToggle();
+      });
+      $("#translate09_button").click(function(){
+        $("#trans09").slideToggle();
+      });
+
+
+    });
+  </script>
+</head>
+<body>
+<ons-page>
+  <div class="background"></div>
+  <ons-toolbar style="background-color: #131515; color: #fff;" id ="toolbar">
+   <div class="left" style = "border: none !important;">
+    <div class="left" id = "back_left" onclick="window.location.replace('home.html')" style = "border: none !important;"data-transition="slidefade"><ons-button modifier="outline light" id = "back_button" tappable><i class="fas fa-chevron-left" id ="back_icon"></i></ons-button></div>
+  </div>
+    <div class="center" id ="center" style="color: #fff;">Sickness</div>
+
+  </ons-toolbar>
+  <div class ="card" id ="illness_card">
+		<h2 style="text-align: center; font-size: 4.5vmin; position: relative;"> BASIC SYMPTOMS</h2>
+		<h4 style="text-align: center;" id ="h_illness"> To Suspect Sickness</h4>
+
+		<hr />
+		<p id ="h_illness" style="text-align: center;">
+			The following are the most common general behaviors or signs (symptomps) observed that will lead one to suspect that a swine or hog is suffering of infections disease.
+		</p>
+    <ons-button id = "translate01_button" onClick="myFunction()" modifier="outline light" style = "opacity: 0.9; " ripple> See Translation... </ons-button>
+    <div id = "intro_translate">
+      <br/>
+      <i style = "font-family: Candara;font-size: 17px; text-align: center;"> Ang mga sumusunod ay ang pinakakaraniwang pangkalahatang pag-uugali o palatandaan (sintomas) na nakikita na hahantong sa isang tao na maghinala na ang isang baboy o baboy ay dumaranas ng mga impeksyong sakit.</i>
+    </div>
+		<hr style="border: 2px solid black;"/>
+		<div>
+			<div class="title_illness">
+			<h5>Off-feed</h5>
+			<p>
+			The first sign sign of illness that one may notics, is that the swine or hog may not be able to eat its normal amount of ration (food packet). In the feeding through remaining unconsumed feeds will be noticed.
+			</p>
+      <ons-button id = "translate02_button" onClick="myFunction()" modifier="outline light" style = "opacity: 0.9; " ripple> See Translation... </ons-button>
+      <div id = "trans02">
+        <br/>
+        <i style = "font-family: Candara;font-size: 17px; text-align: center;"> Ang unang senyales ng karamdaman na maaaring mapansin ng isang tao, ay ang baboy o baboy ay maaaring hindi makakain ng normal nitong dami ng rasyon (pakete ng pagkain). Sa pagpapakain sa pamamagitan ng natitirang hindi natupok na mga feed ay mapapansin.</i>
+      </div>
+			<hr />
+			<h5> Listlessness</h5>
+			<p>
+			In some infectious diseases, the sick swine or hog tend to isolate itself away from the rest of the group and losses its alerntess. It also assumes an abnormal position when standing still or when walking. The animal is sleepy when not moving even when standing is commonly obsered in  severe infections.
+			</p>
+      <ons-button id = "translate03_button" onClick="myFunction()" modifier="outline light" style = "opacity: 0.9; " ripple> See Translation... </ons-button>
+      <div id = "trans03">
+        <br/>
+        <i style = "font-family: Candara;font-size: 17px; text-align: center;"> Sa ilang mga nakakahawang sakit, ang may sakit na baboy o baboy ay may posibilidad na ihiwalay ang sarili mula sa iba pang grupo at nawawala ang pagiging alerto nito. Nagpapalagay din ito ng abnormal na posisyon kapag nakatayo o kapag naglalakad. Ang hayop ay inaantok kapag hindi gumagalaw kahit na nakatayo ay karaniwang napapansin sa matinding impeksyon.</i>
+      </div>
+			<hr />
+			<h5> F e v e r </h5>
+			<p>
+			Most infectious diseases are accompanied by rise in temperature. Use the thermometer to know the degree of fever.
+			</p>
+      <ons-button id = "translate04_button" onClick="myFunction()" modifier="outline light" style = "opacity: 0.9; " ripple> See Translation... </ons-button>
+      <div id = "trans04">
+        <br/>
+        <i style = "font-family: Candara;font-size: 17px; text-align: center;">Karamihan sa mga nakakahawang sakit ay sinamahan ng pagtaas ng temperatura. Gamitin ang thermometer upang malaman ang antas ng lagnat.</i>
+      </div>
+			<hr />
+			<h5> Unresponsive </h5>
+			<p>
+			Sick swines/hogs do not respond to calls or disturbances or noises and even during the feeding time they do not come to the feeding ground.
+			</p>
+      <ons-button id = "translate06_button" onClick="myFunction()" modifier="outline light" style = "opacity: 0.9; " ripple> See Translation... </ons-button>
+      <div id = "trans06">
+        <br/>
+        <i style = "font-family: Candara;font-size: 17px; text-align: center;">Ang mga may sakit na baboy/baboy ay hindi tumutugon sa mga tawag o abala o ingay at kahit na sa oras ng pagpapakain ay hindi sila pumupunta sa lugar ng pagpapakain.</i>
+      </div>
+			<hr />
+			<h5> Weakness and Loss of Weight </h5>
+			<p>
+			When the disease progresses, the swine/hog becomes weak and losses weight, Generally they like to lie down or in recumbent position.
+			</p>
+      <ons-button id = "translate07_button" onClick="myFunction()" modifier="outline light" style = "opacity: 0.9; " ripple> See Translation... </ons-button>
+      <div id = "trans07">
+        <br/>
+        <i style = "font-family: Candara;font-size: 17px; text-align: center;">Kapag lumala ang sakit, ang baboy/baboy ay nanghihina at pumapayat, Kadalasan ay gusto nilang humiga o nakahiga.</i>
+      </div>
+			<hr />
+			<h5> Respiratory Symptoms </h5>
+			<p>
+			When the respiratory system is involved, there is difficulty of breathing and/or there is rapid breathing. In some instances there are discharges from the nostrils which may be watery or thick mucus which may be yellowish or blood stained.
+			</p>
+      <ons-button id = "translate08_button" onClick="myFunction()" modifier="outline light" style = "opacity: 0.9; " ripple> See Translation... </ons-button>
+      <div id = "trans08">
+        <br/>
+        <i style = "font-family: Candara;font-size: 17px; text-align: center;">	Kapag nasasangkot ang respiratory system, nahihirapang huminga at/o may mabilis na paghinga. Sa ilang pagkakataon ay may mga discharge mula sa mga butas ng ilong na maaaring matubig o makapal na uhog na maaaring madilaw-dilaw o may mantsa ng dugo.</i>
+      </div>
+			<hr />
+			<h5> Fecal Disturbances </h5>
+			<p>
+			When the digestive system is affected, the feces may be watery and bad smelling and defecation is often. The tail and around the region of the anus is matted with feces.
+			</p>
+      <ons-button id = "translate09_button" onClick="myFunction()" modifier="outline light" style = "opacity: 0.9; " ripple> See Translation... </ons-button>
+      <div id = "trans09">
+        <br/>
+        <i style = "font-family: Candara;font-size: 17px; text-align: center;">	Kapag naapektuhan ang digestive system, maaaring matubig ang dumi at mabaho at madalas ang pagdumi. Ang buntot at sa paligid ng rehiyon ng anus ay nababalot ng mga dumi.</i>
+      </div>
+			<hr />
+			</div>
+
+		</div>
+	</div>
+
+</ons-page>
+</body>
+</html>

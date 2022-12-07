@@ -1,0 +1,84 @@
+ons-page {
+		animation: transitionIn 0.6s;
+
+	}
+	@keyframes transitionIn{
+		from {
+			opacity: 0;
+			transform: translateX(-10%);
+
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
+
+		}
+	}
+	.Accel {
+	transform: translate3d(0,0,0);
+	}
+.background{
+background-color:#F9F9F7;
+}
+ons-toolbar{
+	border: none !important;
+	background: #B8A4B5 !important;
+
+}
+#back_icon, #settings_icon{
+
+  color: #fff !important;
+	border: none !important;
+
+}
+#back_button{
+	background-color:none !important;
+	border: none;
+
+}
+.card{
+	background: #EDE9ED;
+}
+.container{
+	border-radius: 10px;
+	box-shadow: 2px 2px 1px 4px #B8A4B5;
+	padding: 2px;
+}
+#box{
+	padding: 10px;
+}
+.circle{
+	padding-top: 20px;
+	padding-left: 20px;
+}
+#circle {
+    background: #B8A4B5;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+		box-shadow: -15px -10px 0px 5px #EDE9ED;
+}
+
+h4{
+	color: #82667D;
+ 	position: relative;
+	bottom: 90px;
+	left: 50px;
+	width: 90%;
+	font-size: 1.7em;
+	font-family: verdana
+
+}
+#trans_01, #trans_02, #trans_03, #trans_04, #trans_05, #trans_06, #trans_07, #trans_08, #trans_09, #trans_10, #trans_11, #trans_12, #trans_13{
+  display: none;
+}
+#translate01_button, #translate02_button, #translate03_button, #translate04_button, #translate05_button, #translate06_button, #translate07_button, #translate08_button, #translate09_button, #translate10_button, #translate11_button, #translate12_button, #translate13_button{
+  background-color: #B8A4B5!important;
+
+}
+p{
+	font-size: 18px;
+}
+img{
+	border-radius: 10px;
+}

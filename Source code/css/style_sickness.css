@@ -1,0 +1,50 @@
+ons-page {
+		animation: transitionIn 0.6s;
+
+	}
+	@keyframes transitionIn{
+		from {
+			opacity: 0;
+			transform: translateX(-10%);
+
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
+
+		}
+	}
+	.Accel {
+	transform: translate3d(0,0,0);
+	}
+.background{
+background-color:#F9F9F7;
+}
+ons-toolbar{
+	border: none !important;
+	background: #EDB600 !important;
+
+}
+#back_icon, #settings_icon{
+
+  color: #fff !important;
+	border: none !important;
+
+}
+#back_button{
+	background-color:none !important;
+	border: none;
+
+}
+#intro_translate, #trans02, #trans03, #trans04, #trans05, #trans06, #trans07, #trans08, #trans09{
+  display: none;
+}
+ons-button{
+	color: black !important;
+	border: 1px solid grey !important;
+}
+#back_button{
+	background-color:none !important;
+	border: none !important;
+
+}

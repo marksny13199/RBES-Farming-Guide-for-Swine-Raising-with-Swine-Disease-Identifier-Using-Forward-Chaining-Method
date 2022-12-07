@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="../onsenui/css/onsen-css-components.min.css">
+  <link rel="stylesheet" href="../css/conclusion.css">
+  <script src="../onsenui/js/onsenui.min.js"></script>
+  <script src="../js/exit.js"></script>
+  <script src="../js/jquery.js"></script>
+  <script src="../js/swup.min.js"></script>
+  <script src='../js/db_functions.js'></script>
+  <script>
+    $(document).ready(function(){
+      $("#translate01_button").click(function(){
+        $("#trans_01").slideToggle();
+      });
+      $("#translate02_button").click(function(){
+        $("#trans_02").slideToggle();
+      });
+      $("#translate03_button").click(function(){
+        $("#trans_03").slideToggle();
+      });
+      $("#translate04_button").click(function(){
+        $("#trans_04").slideToggle();
+      });
+      $("#translate05_button").click(function(){
+        $("#trans_05").slideToggle();
+      });
+      $("#obs_button").click(function(){
+        $(".obs_box_hide").slideToggle();
+      });
+      $("#sym_button").click(function(){
+        $(".sym_box_hide").slideToggle();
+      });
+      $("#cause_button").click(function(){
+        $(".cause_box_hide").slideToggle();
+      });
+    });
+  </script>
+
+</head>
+<body>
+<ons-page>
+  <div class="background"></div>
+  <ons-toolbar style="background-color: #131515; color: #fff;" id ="toolbar">
+    <div class="left">
+
+    </div>
+    <div class="center" id ="center" style="color: #fff;">Conclusion</div>
+
+  </ons-toolbar>
+  <div class="conclusion_page">
+  <div class="p_ident">
+      <h3 id = "prob_ident">SAVED DISEASE</h3>
+
+
+  </div>
+  <ons-card id ="disease_card">
+      <h5 id="disease_name"> Pneumonia  </h5>
+      <hr />
+      <p id ="desc"> Description </p>
+      <p> Pneumonia is an important disease and one of the factors is that it can cause limitation of production in swine and may have poor weight gain. </p>
+        <ons-button class = "ons-button" id = "translate01_button" modifier="outline light" ripple> See Translation... </ons-button>
+        <div id = "trans_01">
+          <br/>
+          <i> ~Ang pulmonya ay isang mahalagang sakit at isa sa mga kadahilanan ay na ito ay maaaring maging sanhi ng limitasyon ng produksyon sa mga baboy at maaaring magkaroon ng mahinang pagtaas ng timbang.</i>
+        </div>
+    </ons-card>
+      <div id ="obs_sym">
+        <h3> Tap the following buttons to view</h3>
+      <hr/>
+      <ons-button id = "obs_button" modifier="outline light" ripple> The observed signs and symptoms </ons-button>
+      <div class="obs_box_hide"> <p id="observed_output"> </p></div>
+     </div>
+
+     <div id="obs_sym">
+        <ons-button id = "sym_button" modifier="outline light" ripple>Signs and Symptoms of the Disease </ons-button>
+        <div class="sym_box_hide"><p>Coughing, Diarrhea,  Fever or Reddening of Eyes, Loss of Appetite ,Weight loss  or Slow growth , and Trembling.</p>
+          <ons-button class = "ons-button" id = "translate02_button" modifier="outline light" ripple> See Translation... </ons-button>
+          <div id = "trans_02">
+            <br/>
+            <i id = "p_hide"> ~ Page-uubo, Pag-tatae, Lagnat o Pamumula ng mga mata, Walang ganang kumain, Nababawasan ang timbang o Mabagal na pag laki, at Pangingnig.</i>
+          </div>
+        </div>
+      </div>
+
+      <div id ="obs_sym">
+        <ons-button id = "cause_button" modifier="outline light" ripple>Cause of the Disease</ons-button>
+          <div class="cause_box_hide"><p>One of the causes are cold or wet floor that can give cold temperature for the swine, viruses and bacteria’s that gets from the dirt or dusty areas.</p>
+            <ons-button class = "ons-button" id = "translate03_button" modifier="outline light" ripple> See Translation... </ons-button>
+            <div id = "trans_03">
+              <br/>
+              <i id = "p_hide"> ~ Isa sa mga sanhi ay malamig o basang sahig na maaaring magbigay ng malamig na temperatura para sa mga baboy, mga virus at bacteria na nakukuha mula sa mga dumi o maalikabok na lugar.</i>
+            </div>
+          </div>
+            <hr />
+      </div>
+
+      <div class="treatment">
+        <div class="inner_page">
+        <h2 id = "trtment"> Treatment </h2>
+          <p> Use heavy antibiotics for medications such as Terramycin La (Pfizer) or Enrofloxacin (Baytril) the number of dosage and instruction are present in the vials.  </p>
+          <ons-button class = "ons-button" id = "translate04_button" modifier="outline light" ripple> See Translation... </ons-button>
+          <div id = "trans_04">
+            <br/>
+            <i id = "p_hide"> ~ Gumamit ng mabibigat na antibiotic para sa mga gamot tulad ng Terramycin La (Pfizer) o Enrofloxacin (Baytril) ang bilang ng dosis at pagtuturo ay nasa mga vial.</i>
+          </div>
+        </div>
+      </div>
+      <div class="prevent">
+        <div class="inner_page_prevent">
+        <h2 id = "prv"> Prevention </h2>
+          <p> Avoid wet floor (keep it dry) in the afternoon up to evening. Only clean and bath them in the morning until 10:00am after that let the floor dry.  </p>
+          <ons-button class = "ons-button" id = "translate05_button" modifier="outline light" ripple> See Translation... </ons-button>
+          <div id = "trans_05">
+            <br/>
+            <i id = "p_hide"> ~ Iwasan ang basang sahig (panatilihin itong tuyo) sa hapon hanggang gabi. Linisin lamang at paliguan ang mga ito sa umaga hanggang 10:00am pagkatapos nito hayaang matuyo ang sahig.</i>
+          </div>
+        </div>
+      </div>
+
+        <center style ="padding: 10px;"><ons-button style ="width: 100%; border: 1px solid black !important; color: black !important;"onclick="window.location.replace('../ProblemPage.html')" class="btn btn-success" modifier="outline light" ripple>Back</ons-button></center>
+        <br />
+        <br />
+
+    <!--HIDDEN -->
+
+
+</ons-page>
+<script>
+
+  //for getting the observed symptoms in the local storage
+  document.getElementById("observed_output").innerHTML=localStorage.getItem("observed2");
+
+  //prevent user from backing
+  function preventBack(){
+    window.history.forward();
+  }
+
+  setTimeout("preventBack()", 0);
+  window.onunload = function () { null };
+
+  </script>
+</body>
+</html>

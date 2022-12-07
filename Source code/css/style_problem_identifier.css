@@ -1,0 +1,475 @@
+ons-page {
+		animation: transitionIn 0.6s;
+
+	}
+	@keyframes transitionIn{
+		from {
+			opacity: 0;
+			transform: translateX(-10%);
+
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
+
+		}
+	}
+	.Accel {
+	transform: translate3d(0,0,0);
+	}
+.background{
+  background: #F9F9F7;
+}
+#back_icon, #settings_icon{
+
+	color: #fff !important;
+
+}
+ons-toolbar{
+	border: none !important;
+	background: #2187DB !important;
+
+}
+#back_button{
+	background-color: #2187DB !important;
+	border: none;
+
+}
+.checklist{
+  color: #fff!important;
+  padding: 20px;
+  background:linear-gradient(to bottom right, #A3CEF1 0%, #4A9FE4 100%);
+  box-shadow: 20px 20px 50px 10px #8888;
+  border-radius: 20px;
+
+}
+.check-page{
+  padding: 20px !important;
+}
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+
+}
+ons-button{
+  background: #2187DB !important;
+}
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc
+}
+p{
+  font-size: 15px !important;
+  text-justify: none !important;
+  text-justify: inter-word;
+}
+.h5_disease_name{
+	font-size: 20px !important;
+	font-weight: bold !important;
+	margin-top: 30px !important;
+	margin-bottom: 30px !important;
+}
+.h5_description{
+	font-size: 20px !important;
+	font-weight: bold !important;
+	margin-top: 30px !important;
+	margin-bottom: 30px !important;
+}
+.h5_observed{
+	font-size: 20px !important;
+	font-weight: bold !important;
+	margin-top: 30px !important;
+	margin-bottom: 30px !important;
+}
+.h5_symptoms{
+	font-size: 20px !important;
+	font-weight: bold !important;
+	margin-top: 30px !important;
+	margin-bottom: 30px !important;
+}
+.h5_cause{
+	font-size: 20px !important;
+	font-weight: bold !important;
+	margin-top: 30px !important;
+	margin-bottom: 30px !important;
+}
+.h5_treatment{
+	font-size: 20px !important;
+	font-weight: bold !important;
+	margin-top: 30px !important;
+	margin-bottom: 30px !important;
+}
+.h5_prevention{
+	font-size: 20px !important;
+	font-weight: bold !important;
+	margin-top: 30px !important;
+	margin-bottom: 30px !important;
+}
+
+
+.disease_name{
+	font-size: 1.1rem !important;
+}
+.description{
+	font-size: 1.1rem !important;
+}
+.observed{
+	font-size: 1.1rem !important;
+}
+.symptoms{
+	font-size: 1.1rem !important;
+}
+.cause{
+	font-size: 1.1rem !important;
+}
+.treatment{
+	font-size: 1.1rem !important;
+}
+.prevention{
+	font-size: 1.1rem !important;
+}
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+  transition: .75s;
+
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 6px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+
+}
+
+   /* The Modal (background) */
+	 .modal{
+ 	  background: white;
+ 	  padding: 40px;
+ 	  width: 100%;
+ 	}
+
+	.outer{
+	  padding: 50px !important;
+	  background: black;
+	}
+
+	.modal-content {
+	  background-color: #fefefe;
+	  margin: auto;
+	  padding: 20px;
+	  box-shadow: -10px 4px 10px 6px #ced4da;
+	  border-radius: 20px;
+	  width: 80%;
+	}
+
+	#saved_p_button{
+	  float: right;
+	}
+
+  /* The Close Button */
+	.close{
+	  box-shadow: 1px -2px 2px 2px #ced4da;
+	  border-radius: 500px;
+	  width: 100%;
+	  padding: 20px;
+	  padding-top: 14px;
+	  padding-bottom: 14px;
+	  font-weight: 40px;
+	  font-size: 30px;
+	  color: white;
+	  background: #2187DB;
+	}
+
+	.outer_close{
+		  top: -30px;
+		  left: 28px;
+		  position: relative;
+		  float:right;
+		margin-left: 15px;
+		}
+
+  .close:hover,
+  .close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+  }
+
+  /* The Modal 2nd (background)  */
+#myModal{
+	border-radius: 15px;
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal2 Content */
+  .modal-content2 {
+	background-color: #fefefe;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 90%;
+
+	overflow: auto !important;
+	white-space: normal !important;
+	text-justify: none !important;
+  }
+
+  /* The Close2 Button */
+  .close2 {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+  }
+
+  .close2:hover,
+  .close2:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+  }
+
+  /* Disease Content */
+  #disease{
+	color: black;
+	background-color: white;
+	text-justify: none !important;
+	overflow: auto !important;
+  }
+  p{
+	  color:rgb(0, 0, 0);
+  }
+	.click_submit{
+	padding: 0px 32px;
+	}
+
+  .hr{
+	border: 10px solid green;
+	border-radius: 5px;
+  }
+
+  h5{
+	color: brown;
+  }
+
+  /* top-left border-radius */
+  table tr:first-child th:first-child {
+	border-top-left-radius: 6px;
+  }
+
+  /* top-right border-radius */
+  table tr:first-child th:last-child {
+	border-top-right-radius: 6px;
+  }
+
+  /* bottom-left border-radius */
+  table tr:last-child td:first-child {
+	border-bottom-left-radius: 6px;
+  }
+
+  /* bottom-right border-radius */
+  table tr:last-child td:last-child {
+	border-bottom-right-radius: 6px;
+  }
+
+ /* button design  */
+  .view_observed{
+		width: auto;
+		color: white;
+		background:#2187DB;
+		font-size: 1.1rem;
+	  display: inline-block;
+	 	border: 2px solid white;
+	 	padding: .5rem 1.5rem;
+	 	margin: 0;
+	 	text-decoration: none;
+		border-radius: 10px;
+		box-shadow: 1px 1px 5px 1px #e9ecef;
+  }
+
+.hide_observed{
+	width: auto;
+	color: white;
+	background:#2187DB;
+	font-size: 1.1rem;
+	display: inline-block;
+	border: 2px solid white;
+	padding: .5rem 1.5rem;
+	margin: 0;
+	text-decoration: none;
+	border-radius: 10px;
+	box-shadow: 1px 1px 5px 1px #e9ecef;
+}
+
+.view_symptoms{
+	width: auto;
+	color: white;
+	background:#2187DB;
+	font-size: 1.1rem;
+	display: inline-block;
+	border: 2px solid white;
+	padding: .5rem 1.5rem;
+	margin: 0;
+	text-decoration: none;
+	border-radius: 10px;
+	box-shadow: 1px 1px 5px 1px #e9ecef;
+}
+
+  .hide_symptoms{
+		width: auto;
+		color: white;
+		background:#2187DB;
+		font-size: 1.1rem;
+		display: inline-block;
+		border: 2px solid white;
+		padding: .5rem 1.5rem;
+		margin: 0;
+		text-decoration: none;
+		border-radius: 10px;
+		box-shadow: 1px 1px 5px 1px #e9ecef;
+
+  }
+  .view_cause{
+		width: auto;
+		color: white;
+		background:#2187DB;
+		font-size: 1.1rem;
+		display: inline-block;
+		border: 2px solid white;
+		padding: .5rem 1.5rem;
+		margin: 0;
+		text-decoration: none;
+		border-radius: 10px;
+		box-shadow: 1px 1px 5px 1px #e9ecef;
+
+  }
+  .hide_cause{
+		width: auto;
+		color: white;
+		background:#2187DB;
+		font-size: 1.1rem;
+		display: inline-block;
+		border: 2px solid white;
+		padding: .5rem 1.5rem;
+		margin: 0;
+		text-decoration: none;
+		border-radius: 10px;
+		box-shadow: 1px 1px 5px 1px #e9ecef;
+
+  }
+  .view_treatment{
+		width: auto;
+		color: white;
+		background:#2187DB;
+		font-size: 1.1rem;
+		display: inline-block;
+		border: 2px solid white;
+		padding: .5rem 1.5rem;
+		margin: 0;
+		text-decoration: none;
+		border-radius: 10px;
+		box-shadow: 1px 1px 5px 1px #e9ecef;
+
+  }
+  .hide_treatment{
+		width: auto;
+		color: white;
+		background:#2187DB;
+		font-size: 1.1rem;
+		display: inline-block;
+		border: 2px solid white;
+		padding: .5rem 1.5rem;
+		margin: 0;
+		text-decoration: none;
+		border-radius: 10px;
+		box-shadow: 1px 1px 5px 1px #e9ecef;
+
+  }
+  .view_prevention{
+		width: auto;
+		color: white;
+		background:#2187DB;
+		font-size: 1.1rem;
+		display: inline-block;
+		border: 2px solid white;
+		padding: .5rem 1.5rem;
+		margin: 0;
+		text-decoration: none;
+		border-radius: 10px;
+		box-shadow: 1px 1px 5px 1px #e9ecef;
+
+  }
+  .hide_prevention{
+		width: auto;
+		color: white;
+		background:#2187DB;
+		font-size: 1.1rem;
+		display: inline-block;
+		border: 2px solid white;
+		padding: .5rem 1.5rem;
+		margin: 0;
+		text-decoration: none;
+		border-radius: 10px;
+		box-shadow: 1px 1px 5px 1px #e9ecef;
+
+  }

@@ -1,0 +1,200 @@
+ons-page {
+		animation: transitionIn 0.6s;
+
+	}
+	@keyframes transitionIn{
+		from {
+			opacity: 0;
+			transform: translateX(-10%);
+
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
+
+		}
+	}
+	.Accel {
+	transform: translate3d(0,0,0);
+	}
+.background{
+  background: #F9F9F7;
+}
+#back_icon, #settings_icon{
+
+	color: #fff !important;
+
+}
+#toolbar{
+	background: #2187DB !important;
+}
+#back_button{
+  border: none !important;
+  opacity: 0 !important;
+}
+#card{
+	box-shadow: 20px 20px 50px 10px #A3CEF1;
+}
+#div1{
+	display:none;
+}
+
+#proceed_button{
+  background: #2187DB;
+  color: #fff;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 2px 2px #8888;
+}
+.p_ident{
+	background:#2187DB !important;
+
+  height: 100%;
+  padding: 20px;
+  padding-bottom: 40px;
+}
+
+#prob_ident{
+  color: white;
+  font-weight: bold;
+  font-size: 2.5rem;
+  font-family: Candara;
+}
+#disease_card{
+  margin-top:-20px;
+}
+#pig_ic{
+  width:150px;
+  float:right;
+  left: 55%;
+  top:-7px;
+	
+  position: absolute;
+}
+#desc{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+p, i{
+  font-family:Cambria;
+  font-size: 1.2rem;
+  text-align: justify;
+  text-justify: auto;
+
+}
+#disease_name{
+  font-weight: bold;
+  font-size: 2.5rem;
+  font-family: Candara;
+  border-radius: 20px;
+}
+#translate01_button{
+  color: grey !important;
+  border: 1px solid grey !important;
+}
+#trans_01, #trans_02, #trans_03, #trans_04, #trans_05{
+  display: none;
+}
+#translate02_button{
+  border: 1px solid #ffcb77!important;
+  color: black;
+
+}
+#translate03_button{
+  border: 1px solid #fe6d73!important;
+  color: black
+}
+#translate04_button{
+  border: 1px solid #2187DB !important;
+  background: white !important;
+  color: black
+}
+#translate05_button{
+  border: 1px solid white !important;
+  background: white !important;
+  color: black
+}
+#obs_sym{
+  padding: 10px;
+}
+#obs_button{
+  padding: 20px;
+  color: white;
+  width: 100%;
+  border: none;
+  background:  #17c3b2;
+  text-align: center;
+
+}
+#sym_button{
+  padding: 20px;
+  width: 100%;
+  color: black;
+  border: none;
+  background:  #ffcb77;
+  text-align: center;
+}
+#cause_button{
+  padding: 20px;
+  width: 100%;
+  color: white;
+  border: none;
+  background:  #fe6d73;
+  text-align: center;
+}
+.obs_box_hide{
+  padding: 10px;
+  border-right: 2px solid #17c3b2;
+  border-left: 2px solid #17c3b2;
+  border-bottom: 2px solid #17c3b2;
+  display: none;
+}
+.sym_box_hide{
+  padding: 10px;
+  border-right: 2px solid #ffcb77;
+  border-left: 2px solid #ffcb77;
+  border-bottom: 2px solid #ffcb77;
+  display: none;
+}
+.cause_box_hide{
+  padding: 10px;
+  border-right: 2px solid #fe6d73;
+  border-left: 2px solid #fe6d73;
+  border-bottom: 2px solid #fe6d73;
+  display: none;
+}
+/*don't copy*/
+.treatment{
+  padding:10px;
+}
+#trtment{
+  background-color:#2187DB;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+}
+.prevent{
+  padding:10px;
+  color: white;
+}
+.inner_page{
+  box-shadow:5px -5px 10px 0px #caf0f8;
+  padding:10px;
+  border-radius: 20px;
+}
+.inner_page_prevent{
+  box-shadow:5px -5px 10px 0px #caf0f8;
+  padding:10px;
+  background:#00b4d8;
+  border-radius: 20px;
+}
+#prv{
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  color:black;
+}

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="onsenui/css/onsen-css-components.min.css">
+  <link rel="stylesheet" href="css/style_manual.css">
+  <script src="onsenui/js/onsenui.min.js"></script>
+  <script src="js/exit.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/swup.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        $("#translate01_button").click(function(){
+          $("#intro_translate").slideToggle();
+        });
+        $("#translate02_button").click(function(){
+          $("#area_translate").slideToggle();
+        });
+        $("#translate03_button").click(function(){
+          $("#water_translate").slideToggle();
+        });
+        $("#translate04_button").click(function(){
+          $("#waste_translate").slideToggle();
+        });
+        $("#translate05_button").click(function(){
+          $("#trans_05").slideToggle();
+        });
+        $("#translate06_button").click(function(){
+          $("#trans_06").slideToggle();
+        });
+        $("#translate07_button").click(function(){
+          $("#trans_07").slideToggle();
+        });
+        $("#translate08_button").click(function(){
+          $("#trans_08").slideToggle();
+        });
+        $("#translate09_button").click(function(){
+          $("#trans_09").slideToggle();
+        });
+        $("#translate10_button").click(function(){
+          $("#trans_10").slideToggle();
+        });
+        $("#translate11_button").click(function(){
+          $("#trans_11").slideToggle();
+        });
+        $("#translate12_button").click(function(){
+          $("#trans_12").slideToggle();
+        });
+        $("#translate13_button").click(function(){
+          $("#trans_13").slideToggle();
+        });
+      });
+
+    </script>
+
+</head>
+<body>
+<ons-page>
+  <div class="background"></div>
+  <ons-toolbar style="background-color: #131515; color: #fff;" id ="toolbar">
+   <div class="left">
+    <div class="left" id = "back_left" onclick="window.location.replace('home.html')" data-transition="slidefade"><ons-button modifier="outline light" id ="back_icon" tappable><i class="fas fa-chevron-left" id ="back_icon"></i></ons-button></div>
+  </div>
+    <div class="center" id ="center" style="color: #fff;">Manual</div>
+  </ons-toolbar>
+  <div id = "introduction">
+    <h2 id = "intro" style = "font-family: Franklin Gothic Medium;"> INTRODUCTION </h2>
+    <p id = "intro_p"> Raising swine is pretty common in the Philippines, it is one of the primary source of income. This kind of income is pretty great to some people who have large backyards or have some lot that can be used in raising swine.</p>
+    <p style = "font-family: Optima; font-size: 18px;"> In this page we will be showing the things to do to raise swine </p>
+
+    <ons-button id = "translate01_button" onClick="myFunction()" style = "opacity: 0.9; color: white; " ripple> See Translation... </ons-button>
+    <div id = "intro_translate">
+      <br/>
+      <i style = "color: white; font-family: Candara; font-size: 18px;"> ~ Ang pag-aalaga ng baboy ay medyo karaniwan sa Pilipinas, ito ay isa sa mga pangunahing pinagkukunan ng kita. Ang ganitong uri ng kita ay medyo malaki sa ilang mga tao na may malalaking bakuran o may ilang lote na maaaring magamit sa pag-aalaga ng baboy.
+        Sa page na ito ipapakita namin ang mga dapat gawin para mag-alaga ng baboy.</i>
+    </div>
+  </div>
+
+  <div id = "page_1">
+    <h2 style= "font-family: Comic Sans MS; text-align: center; font-weight: bold; color: #598392;"> Things to Prepare </h2> <hr/>
+    <br/>
+    <div id = "area_div">
+      <h2 style = "text-align: center; font-weight: bold; color: #598392;"> AREA </h2>
+      <img src="img/swine_raising.png" style = "width: 100%; border: 2px solid #598392;"/>
+      <p style = "color: #598392; font-size: 18px;"> It is important to prepare the area for the housing of the swine. The housing must be contructed properly so that it is comfortable. </p>
+      <ons-button id = "translate02_button" modifier="outline light" ripple> See Translation... </ons-button>
+      <div id = "area_translate">
+        <br/>
+        <i style = "font-family: Candara; font-size: 18px; color:#598392;"> ~ Mahalagang ihanda ang lugar para sa tirahan ng mga baboy. Ang pabahay ay dapat na itayo nang maayos upang ito ay komportable.</i>
+      </div>
+    </div>
+      <br /><br />
+
+      <div id ="water_source">
+        <h2 style = "text-align: center; font-weight: bold; color: #598392;"> WATER SOURCE </h2>
+        <img src="img/swine_watering.png" style = "width: 100%; border: 2px solid #598392;"/>
+        <p style = "color: #598392; font-size: 18px;">Proper drainage to ensure that there are no water in the pig house to reduce the risk of filling the area with pig poo or other substance that may put the pigs at risk.</p>
+        <ons-button id = "translate03_button" modifier="outline light" ripple> See Translation... </ons-button>
+        <div id = "water_translate">
+          <br/>
+          <i style = "font-family: Candara; font-size: 18px; color:#598392;"> ~ Wastong drainage upang matiyak na walang tubig sa bahay ng baboy upang mabawasan ang panganib na mapuno ang lugar ng dumi ng baboy o iba pang sangkap na maaaring maglagay sa panganib sa mga baboy. </i>
+          </div>
+        </div><h5 style = "text-align: center;"> PICTURE OF PIG DRINKERS </h5>
+        <img src="img/pig_drinker.png" style = "width: 100%; border: 2px solid #598392;"/>
+
+      </ons-card>
+        <br /> <br />
+      <div id = "waste_div">
+          <h2 style = "text-align: center; font-weight: bold; color: #598392;"> PROPER WASTE DISPOSAL </h2>
+          <img src="img/pig_waste.jpg" style = "width: 100%; border: 2px solid #598392;"/>
+            <p style = "color: #598392; font-size: 18px;">Proper waste disposal for your area, cleaning daily will give a healthy state of your growing pigs. To reduce risk having sickness or diseases and help you feed them better </p>
+
+          <ons-button id = "translate04_button" modifier="outline light" ripple> See Translation... </ons-button>
+        <div id = "waste_translate">
+          <br/>
+          <i style = "font-family: Candara; font-size: 18px; color:#598392;"> ~ Ang wastong pagtatapon ng basura para sa iyong lugar, ang paglilinis araw-araw ay magbibigay ng malusog na kalagayan ng iyong lumalaking baboy. Upang mabawasan ang panganib na magkaroon ng karamdaman o sakit at matulungan kang pakainin sila ng mas mahusay. </i>
+          </div>
+
+      </div>
+      <br /><br />
+    </div>
+    <br /> <br />
+
+      <div class = "step_container">
+
+        <h2 id = "intro" style = "font-family: Franklin Gothic Medium;"> STEPS IN RAISING SWINE </h2>
+          <p style = "color: white;"> Since we are done of the preparation we are now in the phase of raising swine.</p>
+
+            <ons-button id = "translate05_button" modifier="outline light"  style = "color: white;"ripple> See Translation... </ons-button>
+            <div id = "trans_05">
+            <br/>
+            <i style = "font-family: Candara; font-size: 18px; color:white;">Dahil tapos na tayo sa paghahanda ay nasa yugto na tayo ng pag-aalaga ng baboy. </i>
+            </div>
+
+          <h5 style = "color: white; font-weight: bold;"> First things First </h5>
+          <p style = "color: white;"> Ensure that the area is big enough for your swine, 1 square meter per 1 swine so that the area is spacious </p>
+          <ons-button id = "translate06_button" modifier="outline light"  style = "color: white;"ripple> See Translation... </ons-button>
+          <div id = "trans_06">
+          <br/>
+          <i style = "font-family: Candara; font-size: 18px; color:white;">Tiyakin na ang lugar ay sapat na malaki para sa iyong mga baboy, 1 metro kuwadrado bawat 1 baboy upang ang lugar ay maluwag. </i>
+          </div>
+          <hr/>
+        </div>
+         <ons-card style = "background: white;">
+           <h3 style = "font-weight: bold;"> FIRST STEP </h3><hr/>
+           <p> In order to have no problem in raising swine is to clean properly the environment or the housing of the swine. </p>
+           <ons-button id = "translate07_button" modifier="outline light" ripple> See Translation... </ons-button>
+           <div id = "trans_07">
+           <br/>
+           <i style = "font-family: Candara; font-size: 18px;">Upang walang problema sa pag-aalaga ng baboy ay linisin ng maayos ang kapaligiran o ang tirahan ng mga baboy. </i>
+           </div>
+
+           <p style = "font-weight: bold;"> - DAILY CLEANING IS A MUST</p>
+           <img src="img/pig_cleaning.png" style = "width: 100%; border: 2px solid black"/>
+           <p>Daily cleanliness is mostly common in keeping them in a safe area</p>
+           <p>Also, while cleaning make sure to give them a bath since overnight they would get dirty</p>
+           <ons-button id = "translate08_button" modifier="outline light" ripple> See Translation... </ons-button>
+           <div id = "trans_08">
+           <br/>
+           <i style = "font-family: Candara; font-size: 18px;">Gayundin, habang naglilinis siguraduhing paliguan sila dahil sa magdamag ay madudumihan sila. </i>
+           </div>
+
+         </ons-card>
+
+         <ons-card style = "background: white;">
+           <h3 style = "font-weight: bold;"> SECOND STEP </h3><hr/>
+           <p> Feeding swine, daily feeding is a must so that they would not starve 3 times a day. Morning, afternoon and evening also check always of your water supply. </p>
+             <p style = "font-weight: bold; font-size: 25px;">	- FEEDING MANAGEMENT</p><hr/>
+             <p style=" font-size: 15px;"> 5 days to 1 month the required feeds is <i style = "font-weight: bold;"> BABY PIG BOOSTER </i> | 1/2 kilo (3 cups)</p>
+             <h3 style = "font-weight: bold;"> BABY PIG BOOSTER </h3>
+             <img src="img/booster.png" style = "width: 100%;"/>
+             <p> Delicious, nutritious and easy to digest food for piglets from the age of 9 days until it reaches a weight of 10 kilograms. Facilitate the health and growth of your pig because the Producer Baby Pig booster contains a mixture of milk, protein, carbohydrates, fats, vitamins and minerals.</p>
+             <ons-button id = "translate09_button" modifier="outline light" ripple> See Translation... </ons-button>
+             <div id = "trans_09">
+             <br/>
+             <i style = "font-family: Candara; font-size: 18px;">Masarap, masustansya at madaling matunaw ang pagkain ng mga biik mula sa edad na 9 na araw hanggang umabot ito sa timbang na 10 kilo. Pabilisin ang kalusugan at paglaki ng iyong baboy dahil ang Producer Baby Pig booster ay naglalaman ng pinaghalong gatas, protina, carbohydrates, taba, bitamina at mineral </i>
+             </div>
+
+             <hr/>
+             <p style=" font-size: 15px;"> 1 month to 2 months the required feeds is <i style = "font-weight: bold;"> HOG STARTER PELLET </i> | 1 kilo (7 cups)</p>
+             <h3 style = "font-weight: bold;"> HOG STARTER PELLET </h3>
+             <img src="img/hog_starter.png" style = "width: 100%;"/>
+             <p> This is the food that is complete and full of nutrients needed to keep piglets healthy and fast growing. Slowly transfer food from Baby Pig Booster to PRODUCER FEEDS HOG STARTER PELLET. Do this for up to 5 days. The method is to provide 50% PBPB and 50% PHSM. Feed PHSM to piglets weighing 10 to 25 kilograms.</p>
+             <ons-button id = "translate10_button" modifier="outline light" ripple> See Translation... </ons-button>
+             <div id = "trans_10">
+             <br/>
+             <i style = "font-family: Candara; font-size: 18px;">Ito ang pagkain na kumpleto at puno ng sustansya na kailangan para mapanatiling malusog at mabilis na lumaki ang mga biik. Dahan-dahang ilipat ang pagkain mula sa Baby Pig Booster patungo sa PRODUCER FEEDS HOG STARTER PELLET. Gawin ito hanggang 5 araw. Ang pamamaraan ay upang magbigay ng 50% PBPB at 50% PHSM. Pakainin ang PHSM sa mga biik na tumitimbang ng 10 hanggang 25 kilo. </i>
+             </div>
+             <hr/>
+             <p style=" font-size: 15px;"> 2 month to 4 months the required feeds is <i style = "font-weight: bold;"> HOG GROWER PELLET </i> | 2 kilos ( 14 cups)</p>
+             <h3 style = "font-weight: bold;"> HOG GROWER PELLET </h3>
+             <img src="img/hog_grower.png" style = "width: 100%;"/>
+             <p> The food to be given to the aged 90 days to 180 days. It contains minerals that will easily grow your pet pig.</p>
+             <ons-button id = "translate11_button" modifier="outline light" ripple> See Translation... </ons-button>
+             <div id = "trans_11">
+             <br/>
+             <i style = "font-family: Candara; font-size: 18px;">Ang pagkain na ibibigay sa may edad na 90 araw hanggang 180 araw. Naglalaman ito ng mga mineral na madaling palaguin ang iyong alagang baboy. </i>
+             </div>
+             <hr/>
+             <p style=" font-size: 15px;"> 4 months upto commercialization <i style = "font-weight: bold;"> HOG FINISHER PELLET </i> | 3 kilos ( 14 cups)</p>
+             <h3 style = "font-weight: bold;"> FEEDS HOG FINISHER PELLET </h3>
+             <img src="img/finisher.png" style = "width:100%;"/>
+             <p> To be given to a pig that is 180 days old until the slaughter pig is sold</p>
+             <ons-button id = "translate12_button" modifier="outline light" ripple> See Translation... </ons-button>
+             <div id = "trans_12">
+             <br/>
+             <i style = "font-family: Candara; font-size: 18px;">Ibigay lang ito sa baboy kapag 180 days old hanggang pwede na ma benta.</i>
+             </div>
+             <hr/>
+             <h2> DAILY FEEDING SCHEDULE (MORNING, AFTERNOON, EVENING) </h2>
+         </ons-card>
+
+         <ons-card style = "background: white;">
+           <h3 style = "font-weight: bold;"> THIRD STEP </h3><hr/>
+           <p> After 4 months and if your pigs had grown into 90 to 105 kilos you can now start selling </p>
+             <p style = "font-weight: bold; font-size: 25px;"> - COMMERCIALIZATION</p><hr/>
+             <img src="img/commercial.png" style = "width: 100%;"/>
+             <p> Commercialization is ready once your pigs had enought growth. The only thing to prepare is your location and contact details of your commercial also add your picture of the pigs that you want to sell..</p>
+             <ons-button id = "translate13_button" modifier="outline light" ripple> See Translation... </ons-button>
+             <div id = "trans_13">
+             <br/>
+             <i style = "font-family: Candara; font-size: 18px;">Handa na ang komersyalisasyon kapag sapat na ang paglaki ng iyong mga baboy. Ang kailangan lang ihanda ay ang iyong lokasyon at mga contact details ng iyong commercial idagdag din ang iyong larawan ng mga baboy na gusto mong ibenta.</i>
+             </div>
+
+           <hr/>
+           <p> --- </p>
+  </ons-page>
+
+ </script>
+  </body>
+  </html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Swine Raising </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="onsenui/css/onsen-css-components.min.css">
+  <link rel="stylesheet" href="css/style_home.css">
+  <script src="onsenui/js/onsenui.min.js"></script>
+  <script src="js/exit.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src='js/db_functions.js'></script>
+</head>
+
+<body>
+<ons-page id="homepage">
+    <ons-toolbar style="background-color: #CDDCDF;" id ="toolbar" noshadow>
+	   <div class="left">
+			<div class="left" id = "back_left" style="opacity:0;" data-transition="slidefade"><ons-button modifier="outline light" id ="back_icon" tappable><i class="fas fa-chevron-left" id ="back_icon"></i></ons-button></div>
+		</div>
+      <div class="center" id="center" >Home</div>
+	  <div class="right invisible" style="opacity:0;" id="center">sample</div>
+
+    </ons-toolbar>
+	<div class="background"></div>
+
+		<div class="container" id="welcome_card">
+		<div> <img src="img/farmer.png" id ="welcome_ic"> </div>
+			<h5 style="font-weight: bold; font-size: 25px;"> Welcome! </h5>
+			<p> Farmers and users who are interested in raising swine
+			</p>
+
+		</div>
+    </br>
+  <div class="topics">
+		<h3 style="font-weight: bold; font-size: 30px;"> Topics </h3>
+    <p> Swine Raising Categories and Basic Information</p>
+  </div>
+    <div class="outer">
+      <a href="manual.html">
+      <div class="c_container" id ="m_container" >
+        <div class="card_container" id="p_manual" >
+          <h5 style="font-size: 25px;"> Manual </h5>
+          <p> Swine Raising step by step, methods and more. </p>
+          <ons-button modifier="material--flat" id="manual_tap_button" onclick="window.location.href='manual.html'"> Tap Here <i class="fas fa-arrow-circle-right"></i></ons-button>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="outer">
+    <a href="sickness.html">
+    <div class="c_container" id ="s_container" >
+      <div class="card_container" id="p_manual" >
+        <h5 style="font-size: 25px;"> Sickness </h5>
+        <p> Information about the basic symptoms of illness. </p>
+        <ons-button modifier="material--flat" id="sick_tap_button" onclick="window.location.href='sickness.html'"> Tap Here <i class="fas fa-arrow-circle-right"></i></ons-button>
+      </div>
+    </div>
+  </a>
+</div>
+<div class="outer">
+  <a href="information_management.html">
+  <div class="c_container" id ="information_management_container" >
+    <div class="card_container" id="p_manual" >
+      <h5 style="font-size: 25px;"> Information Management </h5>
+      <ons-button modifier="material--flat" id="info_manage_tap_button" onclick="window.location.href='information_management.html'"> Tap Here <i class="fas fa-arrow-circle-right"></i></ons-button>
+    </div>
+  </div>
+</a>
+</div>
+<div class="topics">
+  <h3 style="font-weight: bold; font-size: 30px;"> Features</h3>
+  <p> Our Features for handling and giving solutions of your </p>
+</div>
+<a href="ProblemPage.html">
+<div class="logs_container">
+  <div class="container" id="logs_card">
+    <h5><i class="fas fa-file-alt" id = "file"></i> Saved Disease </h5>
+    <p>View your recent identified disease here. </p>
+    <ons-button modifier="outline light" id ="view_button" onclick="window.location.href='ProblemPage.html'"><i class="fas fa-arrow-right" id ="arrow"></i></ons-button>
+ </div>
+</div>
+</a>
+<a href="problem_identifier.html">
+  <div class="outer">
+    <div class="c_container" id = "p_container">
+      <div class="card_container" id="p_ident_card" >
+        <h5> Disease Identifier </h5>
+        <p> Identify the disease of your swine here </p>
+        <ons-button modifier="material--flat" id="tap_button" onclick="window.location.href='problem_identifier.html'"> Tap Here <i class="fas fa-arrow-circle-right"></i></ons-button>
+      </div>
+    </div>
+</div>
+</a>
+<br />
+<br />
+
+</ons-page>
+
+</body>
+<script>
+function onDeviceReady() {
+    if(device.platform == "Android"){
+        document.addEventListener("backbutton", onBackKeyDown, false);
+    }
+}
+
+
+function onBackKeyDown() {// Handle the back button
+    navigator.notification.confirm(
+		'Are you certain you want to close the app?',  // message
+		function( index ){
+			if( index == 1 ){//look at the docs for this part
+				navigator.app.exitApp();
+			}
+		},              // callback to invoke with index of button pressed
+		'Exit',            // title
+		'Yes,No'          // buttonLabels
+	);
+}
+</script>
+</html>

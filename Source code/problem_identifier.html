@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="onsenui/css/onsen-css-components.min.css">
+  <link rel="stylesheet" href="css/style_problem_identifier.css">
+  <script src="onsenui/js/onsenui.min.js"></script>
+  <script src="js/exit.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/inference_engine.js"></script>
+  <script src="js/trapping.js"></script>
+</head>
+<body>
+  <!--page loading animation-->
+  <div id="load" class="modal">
+    <div class="modal-content">
+      <div style="text-align: center">
+        <p>
+          <ons-icon icon="md-spinner" size="28px" spin></ons-icon> Loading...
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $(".modal").hide();
+    $("#load").show();
+  </script>
+
+<ons-page>
+  <div class="background"></div>
+  <ons-toolbar style="background-color: #131515; color: #fff;" id ="toolbar">
+  <div class="left">
+    <div class="left" id = "back_left" onclick="window.location.replace('home.html')" data-transition="slidefade"><ons-button modifier="outline light" id = "back_button" tappable><i class="fas fa-chevron-left" id ="back_icon"></i></ons-button></div>
+  </div>
+    <div class="center" id ="center" style="color: #fff;">Disease Identifier</div>
+  </ons-toolbar>
+
+  <div class="background"></div>
+
+      <div class="inner_div" >
+         <!--fever 1-->
+         <div id="fever_dialog_1" class="modal">
+          <div class="modal-content">
+            <div class="outer_close"><span class="close" onclick="window.location.replace('home.html')">&times;</span></div>
+            <div class="outer_close"><span class="close" onclick="window.location.replace('problem_identifier.html')">↺</span></div>
+            <div>
+              <form id="fever_dialog_form_1">
+                <br>
+                <h5>Is your swine having a fever?</h5>
+                <h5>(Nilalagnat ba ang baboy mo)</h5>
+                  <ons-list>
+                    <ons-list-item tappable>
+                      <label class="left">
+                        <ons-radio class ="fever1_choice" name="fever1_choice" modifier="material modifier2" value="1"></ons-radio>
+                      </label>
+                      <label class="center">
+                        Yes
+                      </label>
+                    </ons-list-item>
+                    <ons-list-item tappable>
+                      <label class="left">
+                        <ons-radio class ="fever1_choice" name="fever1_choice" modifier="material modifier2"value="0"></ons-radio>
+                      </label>
+                      <label class="center">
+                        No
+                      </label>
+                    </ons-list-item>
+                  </ons-list>
+                  <br / >
+                  <ons-button class="fever_click_submit_1" type="submit">Next</ons-button>
+                </form-->
+              </div>
+            </div>
+          </div>
+          <!--end of fever 1-->
+
+          <!--Loss Appetite 1-->
+          <div id="loss_appetite_dialog_1" class="modal">
+            <div class="modal-content">
+              <div class="outer_close"><span class="close" onclick="window.location.replace('home.html')">&times;</span></div>
+              <div class="outer_close"><span class="close" onclick="window.location.replace('problem_identifier.html')">↺</span></div>
+              <div>
+                <form id="loss_appetite_dialog_form_1">
+                  <br>
+                  <h5>Is your swine lossing its </h5>
+                  <h5>appetite?</h5>
+                  <h5>(Ang baboy mo ba ay walang</h5>
+                  <h5>ganang kumain?)</h5>
+                    <ons-list>
+                      <ons-list-item tappable>
+                        <label class="left">
+                          <ons-radio class="loss_appetite1_choice" name="loss_appetite1_choice" modifier="material modifier2" value="1"></ons-radio>
+                        </label>
+                        <label class="center">
+                          Yes
+                        </label>
+                      </ons-list-item>
+                      <ons-list-item tappable>
+                        <label class="left">
+                          <ons-radio class="loss_appetite1_choice" name="loss_appetite1_choice" modifier="material modifier2"value="0"></ons-radio>
+                        </label>
+                        <label class="center">
+                          No
+                        </label>
+                      </ons-list-item>
+                    </ons-list>
+                    <br / >
+                    <ons-button class="loss_appetite_click_submit_1" type="submit">Next</ons-button>
+
+                  </form-->
+                </div>
+              </div>
+            </div>
+            <!--end of Loss Appetite 1-->
+
+            <!--loss Appetite 2-->
+            <div id="loss_appetite_dialog_2" class="modal">
+              <div class="modal-content">
+                <div class="outer_close"><span class="close" onclick="window.location.replace('home.html')">&times;</span></div>
+                <div class="outer_close"><span class="close" onclick="window.location.replace('problem_identifier.html')">↺</span></div>
+                <div>
+                  <form id="loss_appetite_dialog_form_2">
+                    <br>
+                    <h5>Is your swine lossing its </h5>
+                    <h5>appetite?</h5>
+                    <h5>(Ang baboy mo ba ay walang</h5>
+                    <h5>ganang kumain?)</h5>
+                      <ons-list>
+                        <ons-list-item tappable>
+                          <label class="left">
+                            <ons-radio class="loss_appetite2_choice" name="loss_appetite2_choice" modifier="material modifier2" value="1"></ons-radio>
+                          </label>
+                          <label class="center">
+                            Yes
+                          </label>
+                        </ons-list-item>
+                        <ons-list-item tappable>
+                          <label class="left">
+                            <ons-radio class="loss_appetite2_choice" name="loss_appetite2_choice" modifier="material modifier2"value="0"></ons-radio>
+                          </label>
+                          <label class="center">
+                            No
+                          </label>
+                        </ons-list-item>
+                      </ons-list>
+                      <br / >
+                      <ons-button class="loss_appetite_click_submit_2" type="submit">Next</ons-button>
+
+                    </form-->
+                  </div>
+                </div>
+              </div>
+              <!--end of Loss Appetite 2-->
+
+              <!--Loss Appetite 3-->
+              <div id="loss_appetite_dialog_3" class="modal">
+                <div class="modal-content">
+                  <div class="outer_close"><span class="close" onclick="window.location.replace('home.html')">&times;</span></div>
+                  <div class="outer_close"><span class="close" onclick="window.location.replace('problem_identifier.html')">↺</span></div>
+                  <div>
+                    <form id="loss_appetite_dialog_form_3">
+                      <br>
+                      <h5>Is your swine lossing its </h5>
+                      <h5>appetite?</h5>
+                      <h5>(Ang baboy mo ba ay walang</h5>
+                      <h5>ganang kumain?)</h5>
+                        <ons-list>
+                          <ons-list-item tappable>
+                            <label class="left">
+                              <ons-radio class="loss_appetite3_choice" name="loss_appetite3_choice" modifier="material modifier2" value="1"></ons-radio>
+                            </label>
+                            <label class="center">
+                              Yes
+                            </label>
+                          </ons-list-item>
+                          <ons-list-item tappable>
+                            <label class="left">
+                              <ons-radio class="loss_appetite3_choice" name="loss_appetite3_choice" modifier="material modifier2"value="0"></ons-radio>
+                            </label>
+                            <label class="center">
+                              No
+                            </label>
+                          </ons-list-item>
+                        </ons-list>
+                        <br / >
+                        <ons-button class="loss_appetite_click_submit_3" type="submit">Next</ons-button>
+
+                      </form-->
+                    </div>
+                  </div>
+                </div>
+                <!--end of Loss Appetite 3-->
+
+                <!--Loss Appetite 4-->
+                <div id="loss_appetite_dialog_4" class="modal">
+                  <div class="modal-content">
+                    <div class="outer_close"><span class="close" onclick="window.location.replace('home.html')">&times;</span></div>
+                    <div class="outer_close"><span class="close" onclick="window.location.replace('problem_identifier.html')">↺</span></div>
+                    <div>
+                      <form id="loss_appetite_dialog_form_4">
+                        <br>
+                        <h5>Is your swine lossing its </h5>
+                        <h5>appetite?</h5>
+                        <h5>(Ang baboy mo ba ay walang</h5>
+                        <h5>ganang kumain?)</h5>
+                          <ons-list>
+                            <ons-list-item tappable>
+                              <label class="left">
+                                <ons-radio class="loss_appetite4_choice" name="loss_appetite4_choice" modifier="material modifier2" value="1"></ons-radio>
+                              </label>
+                              <label class="center">
+                                Yes
+                              </label>
+                            </ons-list-item>
+                            <ons-list-item tappable>
+                              <label class="left">
+                                <ons-radio class="loss_appetite4_choice" name="loss_appetite4_choice" modifier="material modifier2"value="0"></ons-radio>
+                              </label>
+                              <label class="center">
+                                No
+                              </label>
+                            </ons-list-item>
+                          </ons-list>
+                          <br / >
+                          <ons-button class="loss_appetite_click_submit_4" type="submit">Next</ons-button>
+
+                        </form-->
+                      </div>
+                    </div>
+                  </div>
+                  <!--end of Loss Appetite 4-->
+
+            <!--Reddining of Eyes 1-->
+            <div id="roe_dialog_1" class="modal">
+              <div class="modal-content">
+                <div class="outer_close"><span class="close" onclick="window.location.replace('home.html')">&times;</span></div>
+                <div class="outer_close"><span class="close" onclick="window.location.replace('problem_identifier.html')">↺</span></div>
+                <div>
+                  <form id="roe_dialog_form_1">
+                    <br>
+                    <h5>Is your swine's eyes</h5>
+                    <h5>reddening?</h5>
+                    <h5>(Namumula ba ang mga</h5>
+                    <h5>mata ng baboy mo?)</h5>
+                      <ons-list>
+                        <ons-list-item tappable>
+                          <label class="left">
+                            <ons-radio class="roe1_choice" name="roe1_choice" modifier="material modifier2" value="1"></ons-radio>
+                          </label>
+                          <label class="center">
+                            Yes
+                          </label>
+                        </ons-list-item>
+                        <ons-list-item tappable>
+                          <label class="left">
+                            <ons-radio class="roe1_choice" name="roe1_choice" modifier="material modifier2"value="0"></ons-radio>
+                          </label>
+                          <label class="center">
+                            No
+                          </label>
+                        </ons-list-item>
+                      </ons-list>
+                      <br / >
+                      <ons-button class="roe_click_submit_1" type="submit">Next</ons-button>
+
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!--end of Reddining of Eyes 1-->
+
+              <!--Coughing 1-->
+              <div id="coughing_dialog_1" class="modal">
+                <div class="modal-content">
+                  <div class="outer_close"><span class="close" onclick="window.location.replace('home.html')">&times;</span></div>
+                  <div class="outer_close"><span class="close" onclick="window.location.replace('problem_identifier.html')">↺</span></div>
+                  <div>
+                    <form id="coughing_dialog_form_1">
+                      <br>
+                      <h5>Is your swine coughing?</h5>
+                      <h5>(Inu-ubo ba ang baboy mo?)</h5>
+                        <ons-list>
+                          <ons-list-item tappable>
+                            <label class="left">
+                              <ons-radio class="coughing1_choice" name="coughing1_choice" modifier="material modifier2" value="1"></ons-radio>
+                            </label>
+                            <label class="center">
+                              Yes
+                            </label>
+                          </ons-list-item>
+                          <ons-list-item tappable>
+                            <label class="left">
+                              <ons-radio class="coughing1_choice" name="coughing1_choice" modifier="material modifier2"value="0"></ons-radio>
+                            </label>
+                            <label class="center">
+                              No
+                            </label>
+                          </ons-list-item>
+                        </ons-list>
+                        <br / >
+                        <ons-button class="coughing_click_submit_1" type="submit">Next</ons-button>
+
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <!--end of Coughing 1-->
+
+                <!--Coughing 2-->
+                <div id="coughing_dialog_2" class="modal">
+                  <div class="modal-content">
+                    <div class="outer_close"><span class="close" onclick="window.location.replace('home.html')">&times;</span></div>
+                    <div class="outer_close"><span class="close" onclick="window.location.replace('problem_identifier.html')">↺</span></div>
+                    <div>
+                      <form id="coughing_dialog_form_2">
+                        <br>
+                        <h5>Is your swine coughing?</h5>
+                        <h5>(Inu-ubo ba ang baboy mo?)</h5>
+                          <ons-list>
+                            <ons-list-item tappable>
+                              <label class="left">
+                                <ons-radio class="coughing2_choice" name="coughing2_choice" modifier="material modifier2" value="1"></ons-radio>
+                              </label>
+                              <label class="center">
+                                Yes
+                              </label>
+                            </ons-list-item>
+                            <ons-list-item tappable>
+                              <label class="left">
+                                <ons-radio class="coughing2_choice" name="coughing2_choice" modifier="material modifier2"value="0"></ons-radio>
+                              </label>
+                              <label class="center">
+                                No
+                              </label>
+                            </ons-list-item>
+                          </ons-list>
+                          <br / >
+                          <ons-button class="coughing_click_submit_2" type="submit">Next</ons-button>
+
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <!--end of Coughing 2-->
+
+                  <!--Coughing 3-->
+                  <div id="coughing_dialog_3" class="modal">
+                    <div class="modal-content">
+                      <div class="outer_close"><span class="close" onclick="window.location.replace('home.html')">&times;</span></div>
+                      <div class="outer_close"><span class="close" onclick="window.location.replace('problem_identifier.html')">↺</span></div>
+                      <div>
+                        <form id="coughing_dialog_form_3">
+                          <br>
+                          <h5>Is your swine coughing?</h5>
+                          <h5>(Inu-ubo ba ang baboy mo?)</h5>
+                            <ons-list>
+                              <ons-list-item tappable>
+                                <label class="left">
+                                  <ons-radio class="coughing3_choice" name="coughing3_choice" modifier="material modifier2" value="1"></ons-radio>
+                                </label>
+                                <label class="center">
+                                  Yes
+                                </label>
+                              </ons-list-item>
+                              <ons-list-item tappable>
+                                <label class="left">
+                                  <ons-radio class="coughing3_choice" name="coughing3_choice" modifier="material modifier2"value="0"></ons-radio>
+                                </label>
+                                <label class="center">
+                                  No
+                                </label>
+                              </ons-list-item>
+                            </ons-list>
+                            <br / >
+                            <ons-button class="coughing_click_submit_3" type="submit">Next</ons-button>
+
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    <!--end of Coughing 3-->
+
+                    <!--Coughing 3-->
+                    <div id="coughing_dialog_4" class="modal">
+                      <div class="modal-content">
+                        <div class="outer_close"><span class="close" onclick="window.location.replace('home.html')">&times;</span></div>
+                        <div class="outer_close"><span class="close" onclick="window.location.replace('problem_identifier.html')">↺</span></div>
+                        <div>
+                          <form id="coughing_dialog_form_4">
+                            <br>
+                            <h5>Is your swine coughing?</h5>
+                            <h5>(Inu-ubo ba ang baboy mo?)</h5>
+                              <ons-list>
+                                <ons-list-item tappable>
+                                  <label class="left">
+                                    <ons-radio class="coughing4_choice" name="coughing4_choice" modifier="material modifier2" value="1"></ons-radio>
+                                  </label>
+                                  <label class="center">
+                                    Yes
+                                  </label>
+                                </ons-list-item>
+                                <ons-list-item tappable>
+                                  <label class="left">
+                                    <ons-radio class="coughing4_choice" name="coughing4_choice" modifier="material modifier2"value="0"></ons-radio>
+                                  </label>
+                                  <label class="center">
+                                    No
+                                  </label>
+                                </ons-list-item>
+                              </ons-list>
+                              <br / >
+                              <ons-button class="coughing_click_submit_4" type="submit">Next</ons-button>
+
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                      <!--end of Coughing 4-->
+
+                <!--Diarrhea 1-->
+                <div id="diarrhea_dialog_1" class="modal">
+                  <div class="modal-content">
+                    <div class="outer_close"><span class="close" onclick="window.location.replace('home.html')">&times;</span></div>
+                    <div class="outer_close"><span class="close" onclick="window.location.replace('problem_identifier.html')">↺</span></div>
+                    <div>
+                      <form id="diarrhea_dialog_form_1">
+                        <br>
+                        <h5>Is your swine having a</h5>
+                        <h5>diarrhea?</h5>
+                        <h5>(Nag-tatae ba ang baboy</h5>
+                        <h5>mo?)</h5>
+                          <ons-list>
+                            <ons-list-item tappable>
+                              <label class="left">
+                                <ons-radio class="diarrhea1_choice" name="diarrhea1_choice" modifier="material modifier2" value="1"></ons-radio>
+                              </label>
+                              <label class="center">
+                                Yes
+                              </label>
+                            </ons-list-item>
+                            <ons-list-item tappable>
+                              <label class="left">
+                                <ons-radio class="diarrhea1_choice" name="diarrhea1_choice" modifier="material modifier2"value="0"></ons-radio>
+                              </label>
+                              <label class="center">
+                                No
+                              </label>
+                            </ons-list-item>
+                          </ons-list>
+                          <br / >
+                          <ons-button class="diarrhea_click_submit_1" type="submit">Next</ons-button>
+
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <!--end of Diarrhea 1-->
+
+                  <!--Diarrhea 2-->
+                  <div id="diarrhea_dialog_2" class="modal">
+                    <div class="modal-content">
+                      <div class="outer_close"><span class="close" onclick="window.location.replace('home.html')">&times;</span></div>
+                      <div class="outer_close"><span class="close" onclick="window.location.replace('problem_identifier.html')">↺</span></div>
+                      <div>
+                        <form id="diarrhea_dialog_form_2">
+                          <br>
+                          <h5>Is your swine having a</h5>
+                          <h5>diarrhea?</h5>
+                          <h5>(Nag-tatae ba ang baboy</h5>
+                          <h5>mo?)</h5>
+                            <ons-list>
+                              <ons-list-item tappable>
+                                <label class="left">
+                                  <ons-radio class="diarrhea2_choice" name="diarrhea2_choice" modifier="material modifier2" value="1"></ons-radio>
+                                </label>
+                                <label class="center">
+                                  Yes
+                                </label>
+                              </ons-list-item>
+                              <ons-list-item tappable>
+                                <label class="left">
+                                  <ons-radio class="diarrhea2_choice" name="diarrhea2_choice" modifier="material modifier2"value="0"></ons-radio>
+                                </label>
+                                <label class="center">
+                                  No
+                                </label>
+                              </ons-list-item>
+                            </ons-list>
+                            <br / >
+                            <ons-button class="diarrhea_click_submit_2" type="submit">Next</ons-button>
+
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    <!--end of Diarrhea 2-->
+
+                    <!--Diarrhea 3-->
+                    <div id="diarrhea_dialog_3" class="modal">
+                      <div class="modal-content">
+                        <div class="outer_close"><span class="close" onclick="window.location.replace('home.html')">&times;</span></div>
+                        <div class="outer_close"><span class="close" onclick="window.location.replace('problem_identifier.html')">↺</span></div>
+                        <div>
+                          <form id="diarrhea_dialog_form_3">
+                            <br>
+                            <h5>Is your swine having a</h5>
+                            <h5>diarrhea?</h5>
+                            <h5>(Nag-tatae ba ang baboy</h5>
+                            <h5>mo?)</h5>
+                              <ons-list>
+                                <ons-list-item tappable>
+                                  <label class="left">
+                                    <ons-radio class="diarrhea3_choice" name="diarrhea3_choice" modifier="material modifier2" value="1"></ons-radio>
+                                  </label>
+                                  <label class="center">
+                                    Yes
+                                  </label>
+                                </ons-list-item>
+                                <ons-list-item tappable>
+                                  <label class="left">
+                                    <ons-radio class="diarrhea3_choice" name="diarrhea3_choice" modifier="material modifier2"value="0"></ons-radio>
+                                  </label>
+                                  <label class="center">
+                                    No
+                                  </label>
+                                </ons-list-item>
+                              </ons-list>
+                              <br / >
+                              <ons-button class="diarrhea_click_submit_3" type="submit">Next</ons-button>
+
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                      <!--end of Diarrhea 3-->
+
+                  <!--Live Worms Expelled in the Feces 1-->
+                  <div id="lwf_dialog_1" class="modal">
+                    <div class="modal-content">
+                      <div class="outer_close"><span class="close" onclick="window.location.replace('home.html')">&times;</span></div>
+                      <div class="outer_close"><span class="close" onclick="window.location.replace('problem_identifier.html')">↺</span></div>
+                      <div>
+                        <form id="lwf_dialog_form_1">
+                          <br>
+                          <h5>Does your swine's feces has</h5>
+                          <h5>live worms on it?</h5>
+                          <h5>(Meron bang buhay na uod</h5>
+                          <h5>tae ng baboy mo?)</h5>
+                            <ons-list>
+                              <ons-list-item tappable>
+                                <label class="left">
+                                  <ons-radio class="lwf1_choice" name="lwf1_choice" modifier="material modifier2" value="1"></ons-radio>
+                                </label>
+                                <label class="center">
+                                  Yes
+                                </label>
+                              </ons-list-item>
+                              <ons-list-item tappable>
+                                <label class="left">
+                                  <ons-radio class="lwf1_choice" name="lwf1_choice" modifier="material modifier2"value="0"></ons-radio>
+                                </label>
+                                <label class="center">
+                                  No
+                                </label>
+                              </ons-list-item>
+                            </ons-list>
+                            <br / >
+                            <ons-button class="lwf_click_submit_1" type="submit">Next</ons-button>
+
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    <!--end of Live Worms Expelled in the Feces 1-->
+
+                    <!--Bloody Diarrhea 1-->
+                    <div id="bloody_diarrhea_dialog_1" class="modal">
+                      <div class="modal-content">
+                        <div class="outer_close"><span class="close" onclick="window.location.replace('home.html')">&times;</span></div>
+                        <div class="outer_close"><span class="close" onclick="window.location.replace('problem_identifier.html')">↺</span></div>
+                        <div>
+                          <form id="bloody_diarrhea_dialog_form_1">
+                            <br>
+                            <h5>Is your swine experiencing a</h5>
+                            <h5>bloody diarrhea?</h5>
+                            <h5>(Madugo ba ang pag-tatae</h5>
+                            <h5>ng baboy mo?)</h5>
+                              <ons-list>
+                                <ons-list-item tappable>
+                                  <label class="left">
+                                    <ons-radio class="bloody_diarrhea1_choice" name="bloody_diarrhea1_choice" modifier="material modifier2" value="1"></ons-radio>
+                                  </label>
+                                  <label class="center">
+                                    Yes
+                                  </label>
+                                </ons-list-item>
+                                <ons-list-item tappable>
+                                  <label class="left">
+                                    <ons-radio class="bloody_diarrhea1_choice" name="bloody_diarrhea1_choice" modifier="material modifier2"value="0"></ons-radio>
+                                  </label>
+                                  <label class="center">
+                                    No
+                                  </label>
+                                </ons-list-item>
+                              </ons-list>
+                              <br / >
+                              <ons-button class="bloody_diarrhea_click_submit_1" type="submit">Next</ons-button>
+
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                      <!--end of Bloddy Diarrhea 1-->
+
+                      <!--Weight Loss 1-->
+                      <div id="weight_loss_dialog_1" class="modal">
+                        <div class="modal-content">
+                          <div class="outer_close"><span class="close" onclick="window.location.replace('home.html')">&times;</span></div>
+                          <div class="outer_close"><span class="close" onclick="window.location.replace('problem_identifier.html')">↺</span></div>
+                          <div>
+                            <form id="weight_loss_dialog_form_1">
+                              <br>
+                              <h5>Is your swine experiencing</h5>
+                              <h5>weight loss?</h5>
+                              <h5>(Nababawasan ba ng timbang</h5>
+                              <h5>ang baboy mo?)</h5>
+                                <ons-list>
+                                  <ons-list-item tappable>
+                                    <label class="left">
+                                      <ons-radio class="weight_loss1_choice" name="weight_loss1_choice" modifier="material modifier2" value="1"></ons-radio>
+                                    </label>
+                                    <label class="center">
+                                      Yes
+                                    </label>
+                                  </ons-list-item>
+                                  <ons-list-item tappable>
+                                    <label class="left">
+                                      <ons-radio class="weight_loss1_choice" name="weight_loss1_choice" modifier="material modifier2"value="0"></ons-radio>
+                                    </label>
+                                    <label class="center">
+                                      No
+                                    </label>
+                                  </ons-list-item>
+                                </ons-list>
+                                <br / >
+                                <ons-button class="weight_loss_click_submit_1" type="submit">Next</ons-button>
+
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                        <!--end of Weight Loss 1-->
+
+                        <!--Weight Loss 2-->
+                        <div id="weight_loss_dialog_2" class="modal">
+                          <div class="modal-content">
+                            <div class="outer_close"><span class="close" onclick="window.location.replace('home.html')">&times;</span></div>
+                            <div class="outer_close"><span class="close" onclick="window.location.replace('problem_identifier.html')">↺</span></div>
+                            <div>
+                              <form id="weight_loss_dialog_form_2">
+                                <br>
+                                <h5>Is your swine experiencing</h5>
+                                <h5>weight loss?</h5>
+                                <h5>(Nababawasan ba ng timbang</h5>
+                                <h5>ang baboy mo?)</h5>
+                                  <ons-list>
+                                    <ons-list-item tappable>
+                                      <label class="left">
+                                        <ons-radio class="weight_loss2_choice" name="weight_loss2_choice" modifier="material modifier2" value="1"></ons-radio>
+                                      </label>
+                                      <label class="center">
+                                        Yes
+                                      </label>
+                                    </ons-list-item>
+                                    <ons-list-item tappable>
+                                      <label class="left">
+                                        <ons-radio class="weight_loss2_choice" name="weight_loss2_choice" modifier="material modifier2"value="0"></ons-radio>
+                                      </label>
+                                      <label class="center">
+                                        No
+                                      </label>
+                                    </ons-list-item>
+                                  </ons-list>
+                                  <br / >
+                                  <ons-button class="weight_loss_click_submit_2" type="submit">Next</ons-button>
+
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                          <!--end of Weight Loss 2-->
+
+                          <!--Weight Loss 3-->
+                          <div id="weight_loss_dialog_3" class="modal">
+                            <div class="modal-content">
+                              <div class="outer_close"><span class="close" onclick="window.location.replace('home.html')">&times;</span></div>
+                              <div class="outer_close"><span class="close" onclick="window.location.replace('problem_identifier.html')">↺</span></div>
+                              <div>
+                                <form id="weight_loss_dialog_form_3">
+                                  <br>
+                                  <h5>Is your swine experiencing</h5>
+                                  <h5>weight loss?</h5>
+                                  <h5>(Nababawasan ba ng timbang</h5>
+                                  <h5>ang baboy mo?)</h5>
+                                    <ons-list>
+                                      <ons-list-item tappable>
+                                        <label class="left">
+                                          <ons-radio class="weight_loss3_choice" name="weight_loss3_choice" modifier="material modifier2" value="1"></ons-radio>
+                                        </label>
+                                        <label class="center">
+                                          Yes
+                                        </label>
+                                      </ons-list-item>
+                                      <ons-list-item tappable>
+                                        <label class="left">
+                                          <ons-radio class="weight_loss3_choice" name="weight_loss3_choice" modifier="material modifier2"value="0"></ons-radio>
+                                        </label>
+                                        <label class="center">
+                                          No
+                                        </label>
+                                      </ons-list-item>
+                                    </ons-list>
+                                    <br / >
+                                    <ons-button class="weight_loss_click_submit_3" type="submit">Next</ons-button>
+
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                            <!--end of Weight Loss 3-->
+
+                            <!--Weight Loss 4-->
+                            <div id="weight_loss_dialog_4" class="modal">
+                              <div class="modal-content">
+                                <div class="outer_close"><span class="close" onclick="window.location.replace('home.html')">&times;</span></div>
+                                <div class="outer_close"><span class="close" onclick="window.location.replace('problem_identifier.html')">↺</span></div>
+                                <div>
+                                  <form id="weight_loss_dialog_form_4">
+                                    <br>
+                                    <h5>Is your swine experiencing</h5>
+                                    <h5>weight loss?</h5>
+                                    <h5>(Nababawasan ba ng timbang</h5>
+                                    <h5>ang baboy mo?)</h5>
+                                      <ons-list>
+                                        <ons-list-item tappable>
+                                          <label class="left">
+                                            <ons-radio class="weight_loss4_choice" name="weight_loss4_choice" modifier="material modifier2" value="1"></ons-radio>
+                                          </label>
+                                          <label class="center">
+                                            Yes
+                                          </label>
+                                        </ons-list-item>
+                                        <ons-list-item tappable>
+                                          <label class="left">
+                                            <ons-radio class="weight_loss4_choice" name="weight_loss4_choice" modifier="material modifier2"value="0"></ons-radio>
+                                          </label>
+                                          <label class="center">
+                                            No
+                                          </label>
+                                        </ons-list-item>
+                                      </ons-list>
+                                      <br / >
+                                      <ons-button class="weight_loss_click_submit_4" type="submit">Next</ons-button>
+
+                                    </form>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--end of Weight Loss 4-->
+
+                              <!--Weight Loss 5-->
+                              <div id="weight_loss_dialog_5" class="modal">
+                                <div class="modal-content">
+                                  <div class="outer_close"><span class="close" onclick="window.location.replace('home.html')">&times;</span></div>
+                                  <div class="outer_close"><span class="close" onclick="window.location.replace('problem_identifier.html')">↺</span></div>
+                                  <div>
+                                    <form id="weight_loss_dialog_form_5">
+                                      <br>
+                                      <h5>Is your swine experiencing</h5>
+                                      <h5>weight loss?</h5>
+                                      <h5>(Nababawasan ba ng timbang</h5>
+                                      <h5>ang baboy mo?)</h5>
+                                        <ons-list>
+                                          <ons-list-item tappable>
+                                            <label class="left">
+                                              <ons-radio class="weight_loss5_choice" name="weight_loss5_choice" modifier="material modifier2" value="1"></ons-radio>
+                                            </label>
+                                            <label class="center">
+                                              Yes
+                                            </label>
+                                          </ons-list-item>
+                                          <ons-list-item tappable>
+                                            <label class="left">
+                                              <ons-radio class="weight_loss5_choice" name="weight_loss5_choice" modifier="material modifier2"value="0"></ons-radio>
+                                            </label>
+                                            <label class="center">
+                                              No
+                                            </label>
+                                          </ons-list-item>
+                                        </ons-list>
+                                        <br / >
+                                        <ons-button class="weight_loss_click_submit_5" type="submit">Next</ons-button>
+
+                                      </form>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!--end of Weight Loss 5-->
+
+                                <!--Weight Loss 6-->
+                                <div id="weight_loss_dialog_6" class="modal">
+                                  <div class="modal-content">
+                                    <div class="outer_close"><span class="close" onclick="window.location.replace('home.html')">&times;</span></div>
+                                    <div class="outer_close"><span class="close" onclick="window.location.replace('problem_identifier.html')">↺</span></div>
+                                    <div>
+                                      <form id="weight_loss_dialog_form_6">
+                                        <br>
+                                        <h5>Is your swine experiencing</h5>
+                                        <h5>weight loss?</h5>
+                                        <h5>(Nababawasan ba ng timbang</h5>
+                                        <h5>ang baboy mo?)</h5>
+                                          <ons-list>
+                                            <ons-list-item tappable>
+                                              <label class="left">
+                                                <ons-radio class="weight_loss6_choice" name="weight_loss6_choice" modifier="material modifier2" value="1"></ons-radio>
+                                              </label>
+                                              <label class="center">
+                                                Yes
+                                              </label>
+                                            </ons-list-item>
+                                            <ons-list-item tappable>
+                                              <label class="left">
+                                                <ons-radio class="weight_loss6_choice" name="weight_loss6_choice" modifier="material modifier2"value="0"></ons-radio>
+                                              </label>
+                                              <label class="center">
+                                                No
+                                              </label>
+                                            </ons-list-item>
+                                          </ons-list>
+                                          <br / >
+                                          <ons-button class="weight_loss_click_submit_6" type="submit">Next</ons-button>
+
+                                        </form>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--end of Weight Loss 6-->
+
+                        <!--Slow Growth 1-->
+                        <div id="slow_growth_dialog_1" class="modal">
+                          <div class="modal-content">
+                            <div class="outer_close"><span class="close" onclick="window.location.replace('home.html')">&times;</span></div>
+                            <div class="outer_close"><span class="close" onclick="window.location.replace('problem_identifier.html')">↺</span></div>
+                            <div>
+                              <form id="slow_growth_dialog_form_1">
+                                <br>
+                                <h5>Is your swine experiencing</h5>
+                                <h5>slow growth?</h5>
+                                <h5>(Mabagal ba ang pag laki</h5>
+                                <h5>ng baboy mo?)</h5>
+
+                                  <ons-list>
+                                    <ons-list-item tappable>
+                                      <label class="left">
+                                        <ons-radio class="slow_growth1_choice" name="slow_growth1_choice" modifier="material modifier2" value="1"></ons-radio>
+                                      </label>
+                                      <label class="center">
+                                        Yes
+                                      </label>
+                                    </ons-list-item>
+                                    <ons-list-item tappable>
+                                      <label class="left">
+                                        <ons-radio class="slow_growth1_choice" name="slow_growth1_choice" modifier="material modifier2"value="0"></ons-radio>
+                                      </label>
+                                      <label class="center">
+                                        No
+                                      </label>
+                                    </ons-list-item>
+                                  </ons-list>
+                                  <br / >
+                                  <ons-button class="slow_growth_click_submit_1" type="submit">Next</ons-button>
+
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                          <!--end of Slow Growth 1-->
+
+                          <!--Slow Growth 2-->
+                          <div id="slow_growth_dialog_2" class="modal">
+                            <div class="modal-content">
+                              <div class="outer_close"><span class="close" onclick="window.location.replace('home.html')">&times;</span></div>
+                              <div class="outer_close"><span class="close" onclick="window.location.replace('problem_identifier.html')">↺</span></div>
+                              <div>
+                                <form id="slow_growth_dialog_form_2">
+                                  <br>
+                                  <h5>Is your swine experiencing</h5>
+                                  <h5>slow growth?</h5>
+                                  <h5>(Mabagal ba ang pag laki</h5>
+                                  <h5>ng baboy mo?)</h5>
+                                    <ons-list>
+                                      <ons-list-item tappable>
+                                        <label class="left">
+                                          <ons-radio class="slow_growth2_choice" name="slow_growth2_choice" modifier="material modifier2" value="1"></ons-radio>
+                                        </label>
+                                        <label class="center">
+                                          Yes
+                                        </label>
+                                      </ons-list-item>
+                                      <ons-list-item tappable>
+                                        <label class="left">
+                                          <ons-radio class="slow_growth2_choice" name="slow_growth2_choice" modifier="material modifier2"value="0"></ons-radio>
+                                        </label>
+                                        <label class="center">
+                                          No
+                                        </label>
+                                      </ons-list-item>
+                                    </ons-list>
+                                    <br / >
+                                    <ons-button class="slow_growth_click_submit_2" type="submit">Next</ons-button>
+
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                            <!--end of Slow Growth 2-->
+
+                            <!--Slow Growth 3-->
+                            <div id="slow_growth_dialog_3" class="modal">
+                              <div class="modal-content">
+                                <div class="outer_close"><span class="close" onclick="window.location.replace('home.html')">&times;</span></div>
+                                <div class="outer_close"><span class="close" onclick="window.location.replace('problem_identifier.html')">↺</span></div>
+                                <div>
+                                  <form id="slow_growth_dialog_form_3">
+                                    <br>
+                                    <h5>Is your swine experiencing</h5>
+                                    <h5>slow growth?</h5>
+                                    <h5>(Mabagal ba ang pag laki</h5>
+                                    <h5>ng baboy mo?)</h5>
+                                      <ons-list>
+                                        <ons-list-item tappable>
+                                          <label class="left">
+                                            <ons-radio class="slow_growth3_choice" name="slow_growth3_choice" modifier="material modifier2" value="1"></ons-radio>
+                                          </label>
+                                          <label class="center">
+                                            Yes
+                                          </label>
+                                        </ons-list-item>
+                                        <ons-list-item tappable>
+                                          <label class="left">
+                                            <ons-radio class="slow_growth3_choice" name="slow_growth3_choice" modifier="material modifier2"value="0"></ons-radio>
+                                          </label>
+                                          <label class="center">
+                                            No
+                                          </label>
+                                        </ons-list-item>
+                                      </ons-list>
+                                      <br / >
+                                      <ons-button class="slow_growth_click_submit_3" type="submit">Next</ons-button>
+
+                                    </form>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--end of Slow Growth 3-->
+
+                              <!--Slow Growth 4-->
+                              <div id="slow_growth_dialog_4" class="modal">
+                                <div class="modal-content">
+                                  <div class="outer_close"><span class="close" onclick="window.location.replace('home.html')">&times;</span></div>
+                                  <div class="outer_close"><span class="close" onclick="window.location.replace('problem_identifier.html')">↺</span></div>
+                                  <div>
+                                    <form id="slow_growth_dialog_form_4">
+                                      <br>
+                                      <h5>Is your swine experiencing</h5>
+                                      <h5>slow growth?</h5>
+                                      <h5>(Mabagal ba ang pag laki</h5>
+                                      <h5>ng baboy mo?)</h5>
+                                        <ons-list>
+                                          <ons-list-item tappable>
+                                            <label class="left">
+                                              <ons-radio class="slow_growth4_choice" name="slow_growth4_choice" modifier="material modifier2" value="1"></ons-radio>
+                                            </label>
+                                            <label class="center">
+                                              Yes
+                                            </label>
+                                          </ons-list-item>
+                                          <ons-list-item tappable>
+                                            <label class="left">
+                                              <ons-radio class="slow_growth4_choice" name="slow_growth4_choice" modifier="material modifier2"value="0"></ons-radio>
+                                            </label>
+                                            <label class="center">
+                                              No
+                                            </label>
+                                          </ons-list-item>
+                                        </ons-list>
+                                        <br / >
+                                        <ons-button class="slow_growth_click_submit_4" type="submit">Next</ons-button>
+
+                                      </form>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!--end of Slow Growth 4-->
+
+                                <!--Slow Growth 5-->
+                                <div id="slow_growth_dialog_5" class="modal">
+                                  <div class="modal-content">
+                                    <div class="outer_close"><span class="close" onclick="window.location.replace('home.html')">&times;</span></div>
+                                    <div class="outer_close"><span class="close" onclick="window.location.replace('problem_identifier.html')">↺</span></div>
+                                    <div>
+                                      <form id="slow_growth_dialog_form_5">
+                                        <br>
+                                        <h5>Is your swine experiencing</h5>
+                                        <h5>slow growth?</h5>
+                                        <h5>(Mabagal ba ang pag laki</h5>
+                                        <h5>ng baboy mo?)</h5>
+                                          <ons-list>
+                                            <ons-list-item tappable>
+                                              <label class="left">
+                                                <ons-radio class="slow_growth5_choice" name="slow_growth5_choice" modifier="material modifier2" value="1"></ons-radio>
+                                              </label>
+                                              <label class="center">
+                                                Yes
+                                              </label>
+                                            </ons-list-item>
+                                            <ons-list-item tappable>
+                                              <label class="left">
+                                                <ons-radio class="slow_growth5_choice" name="slow_growth5_choice" modifier="material modifier2"value="0"></ons-radio>
+                                              </label>
+                                              <label class="center">
+                                                No
+                                              </label>
+                                            </ons-list-item>
+                                          </ons-list>
+                                          <br / >
+                                          <ons-button class="slow_growth_click_submit_5" type="submit">Next</ons-button>
+
+                                        </form>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--end of Slow Growth 5-->
+
+                                  <!--Slow Growth 6-->
+                                  <div id="slow_growth_dialog_6" class="modal">
+                                    <div class="modal-content">
+                                      <div class="outer_close"><span class="close" onclick="window.location.replace('home.html')">&times;</span></div>
+                                      <div class="outer_close"><span class="close" onclick="window.location.replace('problem_identifier.html')">↺</span></div>
+                                      <div>
+                                        <form id="slow_growth_dialog_form_6">
+                                          <br>
+                                          <h5>Is your swine experiencing</h5>
+                                          <h5>slow growth?</h5>
+                                          <h5>(Mabagal ba ang pag laki</h5>
+                                          <h5>ng baboy mo?)</h5>
+                                            <ons-list>
+                                              <ons-list-item tappable>
+                                                <label class="left">
+                                                  <ons-radio class="slow_growth6_choice" name="slow_growth6_choice" modifier="material modifier2" value="1"></ons-radio>
+                                                </label>
+                                                <label class="center">
+                                                  Yes
+                                                </label>
+                                              </ons-list-item>
+                                              <ons-list-item tappable>
+                                                <label class="left">
+                                                  <ons-radio class="slow_growth6_choice" name="slow_growth6_choice" modifier="material modifier2"value="0"></ons-radio>
+                                                </label>
+                                                <label class="center">
+                                                  No
+                                                </label>
+                                              </ons-list-item>
+                                            </ons-list>
+                                            <br / >
+                                            <ons-button class="slow_growth_click_submit_6" type="submit">Next</ons-button>
+
+                                          </form>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!--end of Slow Growth 6-->
+
+                          <!--Trembling 1-->
+                          <div id="trembling_dialog_1" class="modal">
+                            <div class="modal-content">
+                              <div class="outer_close"><span class="close" onclick="window.location.replace('home.html')">&times;</span></div>
+                              <div class="outer_close"><span class="close" onclick="window.location.replace('problem_identifier.html')">↺</span></div>
+                              <div>
+                                <form id="trembling_dialog_form_1">
+                                  <br>
+                                  <h5>Is your swine trembling?</h5>
+                                  <h5>(Nanginginig ba ang baboy</h5>
+                                  <h5>mo?)</h5>
+                                    <ons-list>
+                                      <ons-list-item tappable>
+                                        <label class="left">
+                                          <ons-radio class="trembling1_choice" name="trembling1_choice" modifier="material modifier2" value="1"></ons-radio>
+                                        </label>
+                                        <label class="center">
+                                          Yes
+                                        </label>
+                                      </ons-list-item>
+                                      <ons-list-item tappable>
+                                        <label class="left">
+                                          <ons-radio class="trembling1_choice" name="trembling1_choice" modifier="material modifier2"value="0"></ons-radio>
+                                        </label>
+                                        <label class="center">
+                                          No
+                                        </label>
+                                      </ons-list-item>
+                                    </ons-list>
+                                    <br / >
+                                    <ons-button class="trembling_click_submit_1" type="submit">Next</ons-button>
+
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                            <!--end of Trembling 1-->
+
+                            <!--Trembling 2-->
+                            <div id="trembling_dialog_2" class="modal">
+                              <div class="modal-content">
+                                <div class="outer_close"><span class="close" onclick="window.location.replace('home.html')">&times;</span></div>
+                                <div class="outer_close"><span class="close" onclick="window.location.replace('problem_identifier.html')">↺</span></div>
+                                <div>
+                                  <form id="trembling_dialog_form_2">
+                                    <br>
+                                    <h5>Is your swine trembling?</h5>
+                                    <h5>(Nanginginig ba ang baboy</h5>
+                                    <h5>mo?)</h5>
+                                      <ons-list>
+                                        <ons-list-item tappable>
+                                          <label class="left">
+                                            <ons-radio class="trembling2_choice" name="trembling2_choice" modifier="material modifier2" value="1"></ons-radio>
+                                          </label>
+                                          <label class="center">
+                                            Yes
+                                          </label>
+                                        </ons-list-item>
+                                        <ons-list-item tappable>
+                                          <label class="left">
+                                            <ons-radio class="trembling2_choice" name="trembling2_choice" modifier="material modifier2"value="0"></ons-radio>
+                                          </label>
+                                          <label class="center">
+                                            No
+                                          </label>
+                                        </ons-list-item>
+                                      </ons-list>
+                                      <br / >
+                                      <ons-button class="trembling_click_submit_2" type="submit">Next</ons-button>
+
+                                    </form>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--end of Trembling 2-->
+
+                              <!--Trembling 3-->
+                              <div id="trembling_dialog_3" class="modal">
+                                <div class="modal-content">
+                                  <div class="outer_close"><span class="close" onclick="window.location.replace('home.html')">&times;</span></div>
+                                  <div class="outer_close"><span class="close" onclick="window.location.replace('problem_identifier.html')">↺</span></div>
+                                  <div>
+                                    <form id="trembling_dialog_form_3">
+                                      <br>
+                                      <h5>Is your swine trembling?</h5>
+                                      <h5>(Nanginginig ba ang baboy</h5>
+                                      <h5>mo?)</h5>
+                                        <ons-list>
+                                          <ons-list-item tappable>
+                                            <label class="left">
+                                              <ons-radio class="trembling3_choice" name="trembling3_choice" modifier="material modifier2" value="1"></ons-radio>
+                                            </label>
+                                            <label class="center">
+                                              Yes
+                                            </label>
+                                          </ons-list-item>
+                                          <ons-list-item tappable>
+                                            <label class="left">
+                                              <ons-radio class="trembling3_choice" name="trembling3_choice" modifier="material modifier2"value="0"></ons-radio>
+                                            </label>
+                                            <label class="center">
+                                              No
+                                            </label>
+                                          </ons-list-item>
+                                        </ons-list>
+                                        <br / >
+                                        <ons-button class="trembling_click_submit_3" type="submit">Next</ons-button>
+
+                                      </form>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!--end of Trembling 3-->
+
+                                <!--Trembling 4-->
+                                <div id="trembling_dialog_4" class="modal">
+                                  <div class="modal-content">
+                                    <div class="outer_close"><span class="close" onclick="window.location.replace('home.html')">&times;</span></div>
+                                    <div class="outer_close"><span class="close" onclick="window.location.replace('problem_identifier.html')">↺</span></div>
+                                    <div>
+                                      <form id="trembling_dialog_form_4">
+                                        <br>
+                                        <h5>Is your swine trembling?</h5>
+                                        <h5>(Nanginginig ba ang baboy</h5>
+                                        <h5>mo?)</h5>
+                                          <ons-list>
+                                            <ons-list-item tappable>
+                                              <label class="left">
+                                                <ons-radio class="trembling4_choice" name="trembling4_choice" modifier="material modifier2" value="1"></ons-radio>
+                                              </label>
+                                              <label class="center">
+                                                Yes
+                                              </label>
+                                            </ons-list-item>
+                                            <ons-list-item tappable>
+                                              <label class="left">
+                                                <ons-radio class="trembling4_choice" name="trembling4_choice" modifier="material modifier2"value="0"></ons-radio>
+                                              </label>
+                                              <label class="center">
+                                                No
+                                              </label>
+                                            </ons-list-item>
+                                          </ons-list>
+                                          <br / >
+                                          <ons-button class="trembling_click_submit_4" type="submit">Next</ons-button>
+
+                                        </form>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--end of Trembling 4-->
+
+                            <!--Vomiting 1-->
+                            <div id="vomiting_dialog_1" class="modal">
+                              <div class="modal-content">
+                                <div class="outer_close"><span class="close" onclick="window.location.replace('home.html')">&times;</span></div>
+                                <div class="outer_close"><span class="close" onclick="window.location.replace('problem_identifier.html')">↺</span></div>
+                                <div>
+                                  <form id="vomiting_dialog_form_1">
+                                    <br>
+                                    <h5>Is your swine vomiting?</h5>
+                                    <h5>(Nag-susuka ba ang baboy </h5>
+                                    <h5>mo?)</h5>
+                                      <ons-list>
+                                        <ons-list-item tappable>
+                                          <label class="left">
+                                            <ons-radio class="vomiting1_choice" name="vomiting1_choice" modifier="material modifier2" value="1"></ons-radio>
+                                          </label>
+                                          <label class="center">
+                                            Yes
+                                          </label>
+                                        </ons-list-item>
+                                        <ons-list-item tappable>
+                                          <label class="left">
+                                            <ons-radio class="vomiting1_choice" name="vomiting1_choice" modifier="material modifier2"value="0"></ons-radio>
+                                          </label>
+                                          <label class="center">
+                                            No
+                                          </label>
+                                        </ons-list-item>
+                                      </ons-list>
+                                      <br / >
+                                      <ons-button class="vomiting_click_submit_1" type="submit">Next</ons-button>
+
+                                    </form>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--end of Vomiting 1-->
+
+                        </div>
+
+        <!--alert modal dialog-->
+
+        <ons-dialog id="my-dialog">
+
+            <div style =" width: auto; padding: 20px;height:100%; border: 10px solid #2187DB; overflow: auto !important;">
+            <ons-button id = "restart_button" style = "float:right; position: relative; top: -25px; text-align: center; background:#2187DB; color: white;left: 22px; width:20%; border: none !important; padding: 10px;"onclick="window.location.replace('problem_identifier.html')" modifier="outline light" ripple>X</ons-button>
+
+            <p id="alert_title" style= " font-size: 1.5rem !important;"></p>
+            <hr/>
+            <p id="alert_desc"></p>
+
+            <p>
+              <ons-button id="show_desc" tappable>Diseases covered in the app &#x21E8;</ons-button>
+              <ons-button id="hide_desc"  style = "background:white !important; color: black; border: 2px solid #2187DB;" tappable>Hide diseases	&#x21E9;</ons-button>
+            </p>
+
+            <p id="description" style= " font-size: 1.1rem !important;"><hr/></p>
+
+            <p id="alert_oss_tab" style= " font-size: 1.5rem !important;"></p>
+            <hr/>
+
+            <p>
+              <ons-button id="show_os">Show observed symptom(s) &#x21E8;</ons-button>
+              <ons-button id="hide_os" style = "background:white !important; color: black; border: 2px solid #2187DB;" tappable>Hide observed symptom(s) &#x21E9;</ons-button>
+            </p>
+
+            <p id="observedSymptoms" style= " font-size: 1.1rem !important;"><hr/></p><br>
+
+
+            <br /><br />
+          </div>
+
+        </ons-dialog>
+
+        <div id="myModal" class="modal" style = "width: 100%;">
+          <div class="modal-content2">
+            <span class="close2" style ="padding: 10px; padding-left: 10px; padding-right 10px; border-radius: 20px; background: #e5383b !important; color: white; float: right;">&times;</span>
+              <div id="disease"style = "width: 100% !important;">
+                <!-- Disease Content -->
+              </div>
+         </div>
+         <br /><br />
+       </div>
+
+    </div>
+<script>
+
+
+  //prevent user from backing
+  function preventBack(){
+    window.history.forward();
+  }
+
+  setTimeout("preventBack()", 0);
+  window.onunload = function () { null };
+
+
+  $("#show_os").on("click",function(){
+   $("#observedSymptoms").show(200);
+   $("#hide_os").show();
+   $("#show_os").hide();
+  });
+
+  $("#hide_os").on("click",function(){
+    $("#observedSymptoms").hide(200);
+    $("#show_os").show();
+    $("#hide_os").hide();
+  });
+
+  $("#show_desc").on("click",function(){
+   $("#description").show(200);
+   $("#hide_desc").show();
+   $("#show_desc").hide();
+  });
+
+  $("#hide_desc").on("click",function(){
+   $("#description").hide(200);
+   $("#show_desc").show();
+   $("#hide_desc").hide();
+  });
+
+  $(".modal").hide();
+  $("#load").show();
+</script>
+</body>
+</html>
