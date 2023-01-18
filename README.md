@@ -3,7 +3,9 @@ Rule-based expert systems (RBES) are Artificial Intelligence systems that emulat
 
 This is a android-based capstone project which is converted from the web application using a mobile application framework known as Cordova. The Rule-Based Algorithm Forward Chaining Method was coded manually without the use of Rule-based expert system builder software hence the data is limited.
 
-It is focused on the utilization the Rule Based Algorithm Foward Chaining Method to identify common swine disease that the farmer may encountered during the process of raising swine. It gives a results about the identified swine disease and displays its treatment and methods of prevention. It also has an informative manual about raising a swine from birth to commercialization and the basic symptoms of common swine diseases. This capstone project has awarded as a "Best Information Technology Innovation" during 3rd Information Technology Innovation Forum held at the College of Computer Studies Misamis University.
+It is focused on the utilization the Rule Based Algorithm Foward Chaining Method to identify common swine disease that the farmer may encountered during the process of raising swine. It gives a results about the identified swine disease and displays its treatment and methods of prevention. It also has an informative manual about raising a swine from birth to commercialization and the basic symptoms of common swine diseases. 
+
+This capstone project has awarded as a "Best Information Technology Innovation" during 3rd Information Technology Innovation Forum held at the College of Computer Studies Misamis University.
 
 To set up the system:
 1. Download the APK file to your android phone
