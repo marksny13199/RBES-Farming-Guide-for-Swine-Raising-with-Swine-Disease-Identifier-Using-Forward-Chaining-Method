@@ -10,4 +10,4 @@ This capstone project has awarded as a "Best Information Technology Innovation" 
 To set up the system:
 1. Download the APK file to your android phone.
 2. Install the APK file.
-3. See the documentation and the user manual for additional information.
+3. See the "Documentation.docx" and the "User Manual.docx" for additional information.
