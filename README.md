@@ -8,5 +8,6 @@ It is focused on the utilization the Rule Based Algorithm Foward Chaining Method
 This capstone project has awarded as a "Best Information Technology Innovation" during 3rd Information Technology Innovation Forum held at the College of Computer Studies Misamis University.
 
 To set up the system:
-1. Download the APK file to your android phone
-2. Install the APK file
+1. Download the APK file to your android phone.
+2. Install the APK file.
+3. See the documentation and the user manual for additional information.
